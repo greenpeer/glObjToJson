@@ -1,0 +1,6086 @@
+{
+  "x": {
+    "co2Air": {
+      "label": "x.co2Air",
+      "def": "@(x,a,u,d,p)(1/(p.capCo2Air))*(a.mcBlowAir+a.mcExtAir+a.mcPadAir-(a.mcAirCan)-(a.mcAirTop)-(a.mcAirOut))",
+      "val": [
+        [
+          0,
+          820.3553000475085
+        ],
+        [
+          300,
+          1055.4089291496923
+        ]
+      ]
+    },
+    "co2Top": {
+      "label": "x.co2Top",
+      "def": "@(x,a,u,d,p)(1/(p.capCo2Top))*(a.mcAirTop-(a.mcTopOut))",
+      "val": [
+        [
+          0,
+          820.3553000475085
+        ],
+        [
+          300,
+          870.4074003528328
+        ]
+      ]
+    },
+    "tAir": {
+      "label": "x.tAir",
+      "def": "@(x,a,u,d,p)(1/(p.capAir))*(a.hCanAir+a.hPadAir-(a.hAirMech)+a.hPipeAir+a.hPasAir+a.hBlowAir+a.rGlobSunAir-(a.hAirFlr)-(a.hAirThScr)-(a.hAirOut)-(a.hAirTop)-(a.hAirOutPad)-(a.lAirFog)-(a.hAirBlScr)+a.hLampAir+a.rLampAir+a.hGroPipeAir+a.hIntLampAir+a.rIntLampAir)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          17.62727465266055
+        ]
+      ]
+    },
+    "tTop": {
+      "label": "x.tTop",
+      "def": "@(x,a,u,d,p)(1/(p.capTop))*(a.hThScrTop+a.hAirTop-(a.hTopCovIn)-(a.hTopOut)+a.hBlScrTop)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          7.601319364931754
+        ]
+      ]
+    },
+    "tCan": {
+      "label": "x.tCan",
+      "def": "@(x,a,u,d,p)(1./(a.capCan)).*(a.rParSunCan+a.rNirSunCan+a.rPipeCan-(a.hCanAir)-(a.lCanAir)-(a.rCanCovIn)-(a.rCanFlr)-(a.rCanSky)-(a.rCanThScr)-(a.rCanBlScr)+a.rParLampCan+a.rNirLampCan+a.rFirLampCan+a.rGroPipeCan+a.rParIntLampCan+a.rNirIntLampCan+a.rFirIntLampCan)",
+      "val": [
+        [
+          0,
+          20.5
+        ],
+        [
+          300,
+          16.8921911140087
+        ]
+      ]
+    },
+    "tCovIn": {
+      "label": "x.tCovIn",
+      "def": "@(x,a,u,d,p)(1./(a.capCovIn)).*(a.hTopCovIn+a.lTopCovIn+a.rCanCovIn+a.rFlrCovIn+a.rPipeCovIn+a.rThScrCovIn-(a.hCovInCovE)+a.rLampCovIn+a.rBlScrCovIn+a.rIntLampCovIn)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          1.101578578508062
+        ]
+      ]
+    },
+    "tThScr": {
+      "label": "x.tThScr",
+      "def": "@(x,a,u,d,p)(1/(p.capThScr))*(a.hAirThScr+a.lAirThScr+a.rCanThScr+a.rFlrThScr+a.rPipeThScr-(a.hThScrTop)-(a.rThScrCovIn)-(a.rThScrSky)+a.rBlScrThScr+a.rLampThScr+a.rIntLampThScr)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          12.307920941977436
+        ]
+      ]
+    },
+    "tFlr": {
+      "label": "x.tFlr",
+      "def": "@(x,a,u,d,p)(1/(p.capFlr))*(a.hAirFlr+a.rParSunFlr+a.rNirSunFlr+a.rCanFlr+a.rPipeFlr-(a.hFlrSo1)-(a.rFlrCovIn)-(a.rFlrSky)-(a.rFlrThScr)+a.rParLampFlr+a.rNirLampFlr+a.rFirLampFlr-(a.rFlrBlScr)+a.rParIntLampFlr+a.rNirIntLampFlr+a.rFirIntLampFlr)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          16.502931984277687
+        ]
+      ]
+    },
+    "tPipe": {
+      "label": "x.tPipe",
+      "def": "@(x,a,u,d,p)(1/(p.capPipe))*(a.hBoilPipe+a.hIndPipe+a.hGeoPipe-(a.rPipeSky)-(a.rPipeCovIn)-(a.rPipeCan)-(a.rPipeFlr)-(a.rPipeThScr)-(a.hPipeAir)+a.rLampPipe-(a.rPipeBlScr)+a.hBufHotPipe+a.rIntLampPipe)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          24.496240718747114
+        ]
+      ]
+    },
+    "tCovE": {
+      "label": "x.tCovE",
+      "def": "@(x,a,u,d,p)(1./(a.capCovE)).*(a.rGlobSunCovE+a.hCovInCovE-(a.hCovEOut)-(a.rCovESky))",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          0.7104981633284186
+        ]
+      ]
+    },
+    "tSo1": {
+      "label": "x.tSo1",
+      "def": "@(x,a,u,d,p)(1/(p.capSo1))*(a.hFlrSo1-(a.hSo1So2))",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          16.365468644675918
+        ]
+      ]
+    },
+    "tSo2": {
+      "label": "x.tSo2",
+      "def": "@(x,a,u,d,p)(1/(p.capSo2))*(a.hSo1So2-(a.hSo2So3))",
+      "val": [
+        [
+          0,
+          14.022589672489817
+        ],
+        [
+          300,
+          14.057728978554312
+        ]
+      ]
+    },
+    "tSo3": {
+      "label": "x.tSo3",
+      "def": "@(x,a,u,d,p)(1/(p.capSo3))*(a.hSo2So3-(a.hSo3So4))",
+      "val": [
+        [
+          0,
+          11.545179344979633
+        ],
+        [
+          300,
+          11.554776842586136
+        ]
+      ]
+    },
+    "tSo4": {
+      "label": "x.tSo4",
+      "def": "@(x,a,u,d,p)(1/(p.capSo4))*(a.hSo3So4-(a.hSo4So5))",
+      "val": [
+        [
+          0,
+          9.067769017469452
+        ],
+        [
+          300,
+          9.070152734841628
+        ]
+      ]
+    },
+    "tSo5": {
+      "label": "x.tSo5",
+      "def": "@(x,a,u,d,p)(1/(p.capSo5))*(a.hSo4So5-(a.hSo5SoOut))",
+      "val": [
+        [
+          0,
+          6.590358689959268
+        ],
+        [
+          300,
+          6.591547468026961
+        ]
+      ]
+    },
+    "vpAir": {
+      "label": "x.vpAir",
+      "def": "@(x,a,u,d,p)(1./(a.capVpAir)).*(a.mvCanAir+a.mvPadAir+a.mvFogAir+a.mvBlowAir-(a.mvAirThScr)-(a.mvAirTop)-(a.mvAirOut)-(a.mvAirOutPad)-(a.mvAirMech)-(a.mvAirBlScr))",
+      "val": [
+        [
+          0,
+          1681.9097502994605
+        ],
+        [
+          300,
+          1651.3001330360698
+        ]
+      ]
+    },
+    "vpTop": {
+      "label": "x.vpTop",
+      "def": "@(x,a,u,d,p)(1./(a.capVpTop)).*(a.mvAirTop-(a.mvTopCovIn)-(a.mvTopOut))",
+      "val": [
+        [
+          0,
+          1681.9097502994605
+        ],
+        [
+          300,
+          980.6212272216661
+        ]
+      ]
+    },
+    "tCan24": {
+      "label": "x.tCan24",
+      "def": "@(x,a,u,d,p)1.1574e-05*(x.tCan-(x.tCan24))",
+      "val": [
+        [
+          0,
+          20.5
+        ],
+        [
+          300,
+          20.489618789940987
+        ]
+      ]
+    },
+    "time": {
+      "label": "x.time",
+      "def": "@(x,a,u,d,p)1/86400",
+      "val": [
+        [
+          0,
+          732313.0416666666
+        ],
+        [
+          300,
+          732313.0451388891
+        ]
+      ]
+    },
+    "tLamp": {
+      "label": "x.tLamp",
+      "def": "@(x,a,u,d,p)(1/(p.capLamp))*(a.qLampIn-(a.hLampAir)-(a.rLampSky)-(a.rLampCovIn)-(a.rLampThScr)-(a.rLampPipe)-(a.rLampAir)-(a.rLampBlScr)-(a.rParLampFlr)-(a.rNirLampFlr)-(a.rFirLampFlr)-(a.rParLampCan)-(a.rNirLampCan)-(a.rFirLampCan)-(a.hLampCool)+a.rIntLampLamp)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          28.79855025999904
+        ]
+      ]
+    },
+    "tGroPipe": {
+      "label": "x.tGroPipe",
+      "def": "@(x,a,u,d,p)(1/(p.capGroPipe))*(a.hBoilGroPipe-(a.rGroPipeCan)-(a.hGroPipeAir))",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          16.510815674790713
+        ]
+      ]
+    },
+    "tIntLamp": {
+      "label": "x.tIntLamp",
+      "def": "@(x,a,u,d,p)(1/(p.capIntLamp))*(a.qIntLampIn-(a.hIntLampAir)-(a.rIntLampSky)-(a.rIntLampCovIn)-(a.rIntLampThScr)-(a.rIntLampPipe)-(a.rIntLampAir)-(a.rIntLampBlScr)-(a.rParIntLampFlr)-(a.rNirIntLampFlr)-(a.rFirIntLampFlr)-(a.rParIntLampCan)-(a.rNirIntLampCan)-(a.rFirIntLampCan)-(a.rIntLampLamp))",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          16.5
+        ]
+      ]
+    },
+    "tBlScr": {
+      "label": "x.tBlScr",
+      "def": "@(x,a,u,d,p)(1/(p.capBlScr))*(a.hAirBlScr+a.lAirBlScr+a.rCanBlScr+a.rFlrBlScr+a.rPipeBlScr-(a.hBlScrTop)-(a.rBlScrCovIn)-(a.rBlScrSky)-(a.rBlScrThScr)+a.rLampBlScr+a.rIntLampBlScr)",
+      "val": [
+        [
+          0,
+          16.5
+        ],
+        [
+          300,
+          16.5
+        ]
+      ]
+    },
+    "cBuf": {
+      "label": "x.cBuf",
+      "def": "@(x,a,u,d,p)a.mcAirBuf-(a.mcBufFruit)-(a.mcBufLeaf)-(a.mcBufStem)-(a.mcBufAir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          16.495837507468565
+        ]
+      ]
+    },
+    "cLeaf": {
+      "label": "x.cLeaf",
+      "def": "@(x,a,u,d,p)a.mcBufLeaf-(a.mcLeafAir)-(a.mcLeafHar)",
+      "val": [
+        [
+          0,
+          4368
+        ],
+        [
+          300,
+          4367.869093621489
+        ]
+      ]
+    },
+    "cStem": {
+      "label": "x.cStem",
+      "def": "@(x,a,u,d,p)a.mcBufStem-(a.mcStemAir)",
+      "val": [
+        [
+          0,
+          1560
+        ],
+        [
+          300,
+          1560.1068432703923
+        ]
+      ]
+    },
+    "cFruit": {
+      "label": "x.cFruit",
+      "def": "@(x,a,u,d,p)a.mcBufFruit-(a.mcFruitAir)-(a.mcFruitHar)",
+      "val": [
+        [
+          0,
+          312
+        ],
+        [
+          300,
+          311.99552607345703
+        ]
+      ]
+    },
+    "tCanSum": {
+      "label": "x.tCanSum",
+      "def": "@(x,a,u,d,p)1.1574e-05*(x.tCan)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.060783253573701325
+        ]
+      ]
+    }
+  },
+  "a": {
+    "tauShScrPar": {
+      "label": "a.tauShScrPar",
+      "def": "@(x,a,u,d,p)1-((u.shScr)*(1-(p.tauShScrPar)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "tauShScrPerPar": {
+      "label": "a.tauShScrPerPar",
+      "def": "@(x,a,u,d,p)1-((u.shScrPer)*(1-(p.tauShScrPerPar)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrPar": {
+      "label": "a.rhoShScrPar",
+      "def": "@(x,a,u,d,p)(u.shScr)*(p.rhoShScrPar)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrPerPar": {
+      "label": "a.rhoShScrPerPar",
+      "def": "@(x,a,u,d,p)(u.shScrPer)*(p.rhoShScrPerPar)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauShScrShScrPerPar": {
+      "label": "a.tauShScrShScrPerPar",
+      "def": "@(x,a,u,d,p)((a.tauShScrPar).*(a.tauShScrPerPar))./(1-((a.rhoShScrPar).*(a.rhoShScrPerPar)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrShScrPerParUp": {
+      "label": "a.rhoShScrShScrPerParUp",
+      "def": "@(x,a,u,d,p)a.rhoShScrPar+(((a.tauShScrPar).^2).*(a.rhoShScrPerPar))./(1-((a.rhoShScrPar).*(a.rhoShScrPerPar)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrShScrPerParDn": {
+      "label": "a.rhoShScrShScrPerParDn",
+      "def": "@(x,a,u,d,p)a.rhoShScrPerPar+(((a.tauShScrPerPar).^2).*(a.rhoShScrPar))./(1-((a.rhoShScrPar).*(a.rhoShScrPerPar)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauShScrNir": {
+      "label": "a.tauShScrNir",
+      "def": "@(x,a,u,d,p)1-((u.shScr)*(1-(p.tauShScrNir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "tauShScrPerNir": {
+      "label": "a.tauShScrPerNir",
+      "def": "@(x,a,u,d,p)1-((u.shScrPer)*(1-(p.tauShScrPerNir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrNir": {
+      "label": "a.rhoShScrNir",
+      "def": "@(x,a,u,d,p)(u.shScr)*(p.rhoShScrNir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrPerNir": {
+      "label": "a.rhoShScrPerNir",
+      "def": "@(x,a,u,d,p)(u.shScrPer)*(p.rhoShScrPerNir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauShScrShScrPerNir": {
+      "label": "a.tauShScrShScrPerNir",
+      "def": "@(x,a,u,d,p)((a.tauShScrNir).*(a.tauShScrPerNir))./(1-((a.rhoShScrNir).*(a.rhoShScrPerNir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrShScrPerNirUp": {
+      "label": "a.rhoShScrShScrPerNirUp",
+      "def": "@(x,a,u,d,p)a.rhoShScrNir+(((a.tauShScrNir).^2).*(a.rhoShScrPerNir))./(1-((a.rhoShScrNir).*(a.rhoShScrPerNir)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrShScrPerNirDn": {
+      "label": "a.rhoShScrShScrPerNirDn",
+      "def": "@(x,a,u,d,p)a.rhoShScrPerNir+(((a.tauShScrPerNir).^2).*(a.rhoShScrNir))./(1-((a.rhoShScrNir).*(a.rhoShScrPerNir)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauShScrFir": {
+      "label": "a.tauShScrFir",
+      "def": "@(x,a,u,d,p)1-((u.shScr)*(1-(p.tauShScrFir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "tauShScrPerFir": {
+      "label": "a.tauShScrPerFir",
+      "def": "@(x,a,u,d,p)1-((u.shScrPer)*(1-(p.tauShScrPerFir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrFir": {
+      "label": "a.rhoShScrFir",
+      "def": "@(x,a,u,d,p)(u.shScr)*(p.rhoShScrFir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrPerFir": {
+      "label": "a.rhoShScrPerFir",
+      "def": "@(x,a,u,d,p)(u.shScrPer)*(p.rhoShScrPerFir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauShScrShScrPerFir": {
+      "label": "a.tauShScrShScrPerFir",
+      "def": "@(x,a,u,d,p)((a.tauShScrFir).*(a.tauShScrPerFir))./(1-((a.rhoShScrFir).*(a.rhoShScrPerFir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoShScrShScrPerFirUp": {
+      "label": "a.rhoShScrShScrPerFirUp",
+      "def": "@(x,a,u,d,p)a.rhoShScrFir+(((a.tauShScrFir).^2).*(a.rhoShScrPerFir))./(1-((a.rhoShScrFir).*(a.rhoShScrPerFir)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoShScrShScrPerFirDn": {
+      "label": "a.rhoShScrShScrPerFirDn",
+      "def": "@(x,a,u,d,p)a.rhoShScrPerFir+(((a.tauShScrPerFir).^2).*(a.rhoShScrFir))./(1-((a.rhoShScrFir).*(a.rhoShScrPerFir)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauThScrPar": {
+      "label": "a.tauThScrPar",
+      "def": "@(x,a,u,d,p)1-((u.thScr)*(1-(p.tauThScrPar)))",
+      "val": [
+        [
+          0,
+          0.6000003999638248
+        ],
+        [
+          300,
+          0.6125125715928176
+        ]
+      ]
+    },
+    "rhoThScrPar": {
+      "label": "a.rhoThScrPar",
+      "def": "@(x,a,u,d,p)(u.thScr)*(p.rhoThScrPar)",
+      "val": [
+        [
+          0,
+          0.3499996500316533
+        ],
+        [
+          300,
+          0.3390514998562845
+        ]
+      ]
+    },
+    "tauCovThScrPar": {
+      "label": "a.tauCovThScrPar",
+      "def": "@(x,a,u,d,p)((p.tauRfPar).*(a.tauThScrPar))./(1-((p.rhoRfPar).*(a.rhoThScrPar)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovThScrParUp": {
+      "label": "a.rhoCovThScrParUp",
+      "def": "@(x,a,u,d,p)p.rhoRfPar+(((p.tauRfPar).^2).*(a.rhoThScrPar))./(1-((p.rhoRfPar).*(a.rhoThScrPar)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovThScrParDn": {
+      "label": "a.rhoCovThScrParDn",
+      "def": "@(x,a,u,d,p)a.rhoThScrPar+(((a.tauThScrPar).^2).*(p.rhoRfPar))./(1-((p.rhoRfPar).*(a.rhoThScrPar)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauThScrNir": {
+      "label": "a.tauThScrNir",
+      "def": "@(x,a,u,d,p)1-((u.thScr)*(1-(p.tauThScrNir)))",
+      "val": [
+        [
+          0,
+          0.6000003999638248
+        ],
+        [
+          300,
+          0.6125125715928176
+        ]
+      ]
+    },
+    "rhoThScrNir": {
+      "label": "a.rhoThScrNir",
+      "def": "@(x,a,u,d,p)(u.thScr)*(p.rhoThScrNir)",
+      "val": [
+        [
+          0,
+          0.3499996500316533
+        ],
+        [
+          300,
+          0.3390514998562845
+        ]
+      ]
+    },
+    "tauCovThScrNir": {
+      "label": "a.tauCovThScrNir",
+      "def": "@(x,a,u,d,p)((p.tauRfNir).*(a.tauThScrNir))./(1-((p.rhoRfNir).*(a.rhoThScrNir)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovThScrNirUp": {
+      "label": "a.rhoCovThScrNirUp",
+      "def": "@(x,a,u,d,p)p.rhoRfNir+(((p.tauRfNir).^2).*(a.rhoThScrNir))./(1-((p.rhoRfNir).*(a.rhoThScrNir)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovThScrNirDn": {
+      "label": "a.rhoCovThScrNirDn",
+      "def": "@(x,a,u,d,p)a.rhoThScrNir+(((a.tauThScrNir).^2).*(p.rhoRfNir))./(1-((p.rhoRfNir).*(a.rhoThScrNir)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauCovParOld": {
+      "label": "a.tauCovParOld",
+      "def": "@(x,a,u,d,p)((a.tauShScrShScrPerPar).*(a.tauCovThScrPar))./(1-((a.rhoShScrShScrPerParDn).*(a.rhoCovThScrParUp)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovParOldUp": {
+      "label": "a.rhoCovParOldUp",
+      "def": "@(x,a,u,d,p)a.rhoShScrShScrPerParUp+(((a.tauShScrShScrPerPar).^2).*(a.rhoCovThScrParUp))./(1-((a.rhoShScrShScrPerParDn).*(a.rhoCovThScrParUp)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovParOldDn": {
+      "label": "a.rhoCovParOldDn",
+      "def": "@(x,a,u,d,p)a.rhoCovThScrParDn+(((a.tauCovThScrPar).^2).*(a.rhoShScrShScrPerParDn))./(1-((a.rhoShScrShScrPerParDn).*(a.rhoCovThScrParUp)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauCovNirOld": {
+      "label": "a.tauCovNirOld",
+      "def": "@(x,a,u,d,p)((a.tauShScrShScrPerNir).*(a.tauCovThScrNir))./(1-((a.rhoShScrShScrPerNirDn).*(a.rhoCovThScrNirUp)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovNirOldUp": {
+      "label": "a.rhoCovNirOldUp",
+      "def": "@(x,a,u,d,p)a.rhoShScrShScrPerNirUp+(((a.tauShScrShScrPerNir).^2).*(a.rhoCovThScrNirUp))./(1-((a.rhoShScrShScrPerNirDn).*(a.rhoCovThScrNirUp)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovNirOldDn": {
+      "label": "a.rhoCovNirOldDn",
+      "def": "@(x,a,u,d,p)a.rhoCovThScrNirDn+(((a.tauCovThScrNir).^2).*(a.rhoShScrShScrPerNirDn))./(1-((a.rhoShScrShScrPerNirDn).*(a.rhoCovThScrNirUp)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauBlScrPar": {
+      "label": "a.tauBlScrPar",
+      "def": "@(x,a,u,d,p)1-((u.blScr)*(1-(p.tauBlScrPar)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoBlScrPar": {
+      "label": "a.rhoBlScrPar",
+      "def": "@(x,a,u,d,p)(u.blScr)*(p.rhoBlScrPar)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauCovBlScrPar": {
+      "label": "a.tauCovBlScrPar",
+      "def": "@(x,a,u,d,p)((a.tauCovParOld).*(a.tauBlScrPar))./(1-((a.rhoCovParOldDn).*(a.rhoBlScrPar)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovBlScrParUp": {
+      "label": "a.rhoCovBlScrParUp",
+      "def": "@(x,a,u,d,p)a.rhoCovParOldUp+(((a.tauCovParOld).^2).*(a.rhoBlScrPar))./(1-((a.rhoCovParOldDn).*(a.rhoBlScrPar)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovBlScrParDn": {
+      "label": "a.rhoCovBlScrParDn",
+      "def": "@(x,a,u,d,p)a.rhoBlScrPar+(((a.tauBlScrPar).^2).*(a.rhoCovParOldDn))./(1-((a.rhoCovParOldDn).*(a.rhoBlScrPar)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauBlScrNir": {
+      "label": "a.tauBlScrNir",
+      "def": "@(x,a,u,d,p)1-((u.blScr)*(1-(p.tauBlScrNir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoBlScrNir": {
+      "label": "a.rhoBlScrNir",
+      "def": "@(x,a,u,d,p)(u.blScr)*(p.rhoBlScrNir)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauCovBlScrNir": {
+      "label": "a.tauCovBlScrNir",
+      "def": "@(x,a,u,d,p)((a.tauCovNirOld).*(a.tauBlScrNir))./(1-((a.rhoCovNirOldDn).*(a.rhoBlScrNir)))",
+      "val": [
+        [
+          0,
+          0.5343114883816418
+        ],
+        [
+          300,
+          0.5446416915672111
+        ]
+      ]
+    },
+    "rhoCovBlScrNirUp": {
+      "label": "a.rhoCovBlScrNirUp",
+      "def": "@(x,a,u,d,p)a.rhoCovNirOldUp+(((a.tauCovNirOld).^2).*(a.rhoBlScrNir))./(1-((a.rhoCovNirOldDn).*(a.rhoBlScrNir)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "rhoCovBlScrNirDn": {
+      "label": "a.rhoCovBlScrNirDn",
+      "def": "@(x,a,u,d,p)a.rhoBlScrNir+(((a.tauBlScrNir).^2).*(a.rhoCovNirOldDn))./(1-((a.rhoCovNirOldDn).*(a.rhoBlScrNir)))",
+      "val": [
+        [
+          0,
+          0.39903061929689176
+        ],
+        [
+          300,
+          0.39007265844781963
+        ]
+      ]
+    },
+    "tauCovPar": {
+      "label": "a.tauCovPar",
+      "def": "@(x,a,u,d,p)((a.tauCovBlScrPar).*(p.tauLampPar))./(1-((a.rhoCovBlScrParDn).*(p.rhoLampPar)))",
+      "val": [
+        [
+          0,
+          0.5236252586140089
+        ],
+        [
+          300,
+          0.5337488577358668
+        ]
+      ]
+    },
+    "rhoCovPar": {
+      "label": "a.rhoCovPar",
+      "def": "@(x,a,u,d,p)a.rhoCovBlScrParUp+(((a.tauCovBlScrPar).^2).*(p.rhoLampPar))./(1-((a.rhoCovBlScrParDn).*(p.rhoLampPar)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "tauCovNir": {
+      "label": "a.tauCovNir",
+      "def": "@(x,a,u,d,p)((a.tauCovBlScrNir).*(p.tauLampNir))./(1-((a.rhoCovBlScrNirDn).*(p.rhoLampNir)))",
+      "val": [
+        [
+          0,
+          0.5236252586140089
+        ],
+        [
+          300,
+          0.5337488577358668
+        ]
+      ]
+    },
+    "rhoCovNir": {
+      "label": "a.rhoCovNir",
+      "def": "@(x,a,u,d,p)a.rhoCovBlScrNirUp+(((a.tauCovBlScrNir).^2).*(p.rhoLampNir))./(1-((a.rhoCovBlScrNirDn).*(p.rhoLampNir)))",
+      "val": [
+        [
+          0,
+          0.3949290048137139
+        ],
+        [
+          300,
+          0.3862597933956409
+        ]
+      ]
+    },
+    "tauCovFir": {
+      "label": "a.tauCovFir",
+      "def": "@(x,a,u,d,p)((a.tauShScrShScrPerFir).*(p.tauRfFir))./(1-((a.rhoShScrShScrPerFirDn).*(p.rhoRfFir)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rhoCovFir": {
+      "label": "a.rhoCovFir",
+      "def": "@(x,a,u,d,p)a.rhoShScrShScrPerFirUp+(((a.tauShScrShScrPerFir).^2).*(p.rhoRfFir))./(1-((a.rhoShScrShScrPerFirDn).*(p.rhoRfFir)))",
+      "val": [
+        [
+          0,
+          0.15
+        ],
+        [
+          300,
+          0.15
+        ]
+      ]
+    },
+    "aCovPar": {
+      "label": "a.aCovPar",
+      "def": "@(x,a,u,d,p)1-(a.tauCovPar)-(a.rhoCovPar)",
+      "val": [
+        [
+          0,
+          0.08144573657227722
+        ],
+        [
+          300,
+          0.07999134886849225
+        ]
+      ]
+    },
+    "aCovNir": {
+      "label": "a.aCovNir",
+      "def": "@(x,a,u,d,p)1-(a.tauCovNir)-(a.rhoCovNir)",
+      "val": [
+        [
+          0,
+          0.08144573657227722
+        ],
+        [
+          300,
+          0.07999134886849225
+        ]
+      ]
+    },
+    "aCovFir": {
+      "label": "a.aCovFir",
+      "def": "@(x,a,u,d,p)1-(a.tauCovFir)-(a.rhoCovFir)",
+      "val": [
+        [
+          0,
+          0.85
+        ],
+        [
+          300,
+          0.85
+        ]
+      ]
+    },
+    "epsCovFir": {
+      "label": "a.epsCovFir",
+      "def": "@(x,a,u,d,p)a.aCovFir",
+      "val": [
+        [
+          0,
+          0.85
+        ],
+        [
+          300,
+          0.85
+        ]
+      ]
+    },
+    "capCov": {
+      "label": "a.capCov",
+      "def": "@(x,a,u,d,p)(cosd(p.psi))*((((u.shScrPer)*(p.hShScrPer))*(p.rhoShScrPer))*(p.cPShScrPer)+((p.hRf)*(p.rhoRf))*(p.cPRf))",
+      "val": [
+        [
+          0,
+          8099.878153495455
+        ],
+        [
+          300,
+          8099.878153495455
+        ]
+      ]
+    },
+    "lai": {
+      "label": "a.lai",
+      "def": "@(x,a,u,d,p)(p.sla)*(x.cLeaf)",
+      "val": [
+        [
+          0,
+          0.1161888
+        ],
+        [
+          300,
+          0.1161853178903316
+        ]
+      ]
+    },
+    "capCan": {
+      "label": "a.capCan",
+      "def": "@(x,a,u,d,p)(p.capLeaf)*(a.lai)",
+      "val": [
+        [
+          0,
+          139.42656
+        ],
+        [
+          300,
+          139.42238146839793
+        ]
+      ]
+    },
+    "capCovE": {
+      "label": "a.capCovE",
+      "def": "@(x,a,u,d,p)0.1*(a.capCov)",
+      "val": [
+        [
+          0,
+          809.9878153495456
+        ],
+        [
+          300,
+          809.9878153495456
+        ]
+      ]
+    },
+    "capCovIn": {
+      "label": "a.capCovIn",
+      "def": "@(x,a,u,d,p)0.1*(a.capCov)",
+      "val": [
+        [
+          0,
+          809.9878153495456
+        ],
+        [
+          300,
+          809.9878153495456
+        ]
+      ]
+    },
+    "capVpAir": {
+      "label": "a.capVpAir",
+      "def": "@(x,a,u,d,p)((p.mWater)*(p.hAir))./((p.R)*(x.tAir+273.15))",
+      "val": [
+        [
+          0,
+          4.709008794759098e-05
+        ],
+        [
+          300,
+          4.69075308251395e-05
+        ]
+      ]
+    },
+    "capVpTop": {
+      "label": "a.capVpTop",
+      "def": "@(x,a,u,d,p)((p.mWater)*(p.hGh-(p.hAir)))./((p.R)*(x.tTop+273.15))",
+      "val": [
+        [
+          0,
+          4.522143366395645e-06
+        ],
+        [
+          300,
+          4.665477010186531e-06
+        ]
+      ]
+    },
+    "qLampIn": {
+      "label": "a.qLampIn",
+      "def": "@(x,a,u,d,p)(p.thetaLampMax)*(u.lamp)",
+      "val": [
+        [
+          0,
+          66.66666666666667
+        ],
+        [
+          300,
+          66.66666666666667
+        ]
+      ]
+    },
+    "qIntLampIn": {
+      "label": "a.qIntLampIn",
+      "def": "@(x,a,u,d,p)(p.thetaIntLampMax)*(u.intLamp)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParGhSun": {
+      "label": "a.rParGhSun",
+      "def": "@(x,a,u,d,p)(((1-(p.etaGlobAir)).*(a.tauCovPar)).*(p.etaGlobPar)).*(d.iGlob)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParGhLamp": {
+      "label": "a.rParGhLamp",
+      "def": "@(x,a,u,d,p)(p.etaLampPar)*(a.qLampIn)",
+      "val": [
+        [
+          0,
+          36.96857670979668
+        ],
+        [
+          300,
+          36.96857670979668
+        ]
+      ]
+    },
+    "rParGhIntLamp": {
+      "label": "a.rParGhIntLamp",
+      "def": "@(x,a,u,d,p)(p.etaIntLampPar)*(a.qIntLampIn)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCanSun": {
+      "label": "a.rCanSun",
+      "def": "@(x,a,u,d,p)((1-(p.etaGlobAir)).*(d.iGlob)).*((p.etaGlobPar)*(a.tauCovPar)+(p.etaGlobNir)*(a.tauCovNir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCanLamp": {
+      "label": "a.rCanLamp",
+      "def": "@(x,a,u,d,p)(p.etaLampPar+p.etaLampNir)*(a.qLampIn)",
+      "val": [
+        [
+          0,
+          38.301910043130015
+        ],
+        [
+          300,
+          38.301910043130015
+        ]
+      ]
+    },
+    "rCanIntLamp": {
+      "label": "a.rCanIntLamp",
+      "def": "@(x,a,u,d,p)(p.etaIntLampPar+p.etaIntLampNir)*(a.qIntLampIn)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCan": {
+      "label": "a.rCan",
+      "def": "@(x,a,u,d,p)a.rCanSun+a.rCanLamp+a.rCanIntLamp",
+      "val": [
+        [
+          0,
+          38.301910043130015
+        ],
+        [
+          300,
+          38.301910043130015
+        ]
+      ]
+    },
+    "rParSunCanDown": {
+      "label": "a.rParSunCanDown",
+      "def": "@(x,a,u,d,p)((a.rParGhSun).*(1-(p.rhoCanPar))).*(1-(exp((-1*(p.k1Par))*(a.lai))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParLampCanDown": {
+      "label": "a.rParLampCanDown",
+      "def": "@(x,a,u,d,p)((a.rParGhLamp).*(1-(p.rhoCanPar))).*(1-(exp((-1*(p.k1Par))*(a.lai))))",
+      "val": [
+        [
+          0,
+          2.6855709203886238
+        ],
+        [
+          300,
+          2.685493663967606
+        ]
+      ]
+    },
+    "fIntLampCanPar": {
+      "label": "a.fIntLampCanPar",
+      "def": "@(x,a,u,d,p)1-((p.fIntLampDown)*(exp(((-1*(p.k1IntPar))*(p.vIntLampPos))*(a.lai))))+(p.fIntLampDown-1)*(exp(((-1*(p.k1IntPar))*(1-(p.vIntLampPos)))*(a.lai)))",
+      "val": [
+        [
+          0,
+          0.07811257354463685
+        ],
+        [
+          300,
+          0.07811032646271363
+        ]
+      ]
+    },
+    "fIntLampCanNir": {
+      "label": "a.fIntLampCanNir",
+      "def": "@(x,a,u,d,p)1-((p.fIntLampDown)*(exp(((-1*(p.kIntNir))*(p.vIntLampPos))*(a.lai))))+(p.fIntLampDown-1)*(exp(((-1*(p.kIntNir))*(1-(p.vIntLampPos)))*(a.lai)))",
+      "val": [
+        [
+          0,
+          0.030884012391258375
+        ],
+        [
+          300,
+          0.030883101257429525
+        ]
+      ]
+    },
+    "rParIntLampCanDown": {
+      "label": "a.rParIntLampCanDown",
+      "def": "@(x,a,u,d,p)((a.rParGhIntLamp).*(a.fIntLampCanPar)).*(1-(p.rhoCanPar))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParSunFlrCanUp": {
+      "label": "a.rParSunFlrCanUp",
+      "def": "@(x,a,u,d,p)a.rParGhSun.*(((exp((-1*(p.k1Par))*(a.lai)))*(p.rhoFlrPar))*(1-(p.rhoCanPar))).*(1-(exp((-1*(p.k2Par))*(a.lai))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParLampFlrCanUp": {
+      "label": "a.rParLampFlrCanUp",
+      "def": "@(x,a,u,d,p)((((a.rParGhLamp).*(exp((-1*(p.k1Par))*(a.lai))))*(p.rhoFlrPar))*(1-(p.rhoCanPar))).*(1-(exp((-1*(p.k2Par))*(a.lai))))",
+      "val": [
+        [
+          0,
+          1.6092661418342795
+        ],
+        [
+          300,
+          1.6092237701550058
+        ]
+      ]
+    },
+    "rParIntLampFlrCanUp": {
+      "label": "a.rParIntLampFlrCanUp",
+      "def": "@(x,a,u,d,p)(((((a.rParGhIntLamp).*(p.fIntLampDown)).*(exp(((-1*(p.k1IntPar))*(p.vIntLampPos)).*(a.lai)))).*(p.rhoFlrPar))*(1-(p.rhoCanPar))).*(1-(exp((-1*(p.k2IntPar))*(a.lai))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParSunCan": {
+      "label": "a.rParSunCan",
+      "def": "@(x,a,u,d,p)a.rParSunCanDown+a.rParSunFlrCanUp",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParLampCan": {
+      "label": "a.rParLampCan",
+      "def": "@(x,a,u,d,p)a.rParLampCanDown+a.rParLampFlrCanUp",
+      "val": [
+        [
+          0,
+          4.2948370622229035
+        ],
+        [
+          300,
+          4.294717434122612
+        ]
+      ]
+    },
+    "rParIntLampCan": {
+      "label": "a.rParIntLampCan",
+      "def": "@(x,a,u,d,p)a.rParIntLampCanDown+a.rParIntLampFlrCanUp",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauHatCovNir": {
+      "label": "a.tauHatCovNir",
+      "def": "@(x,a,u,d,p)1-(a.rhoCovNir)",
+      "val": [
+        [
+          0,
+          0.605070995186286
+        ],
+        [
+          300,
+          0.613740206604359
+        ]
+      ]
+    },
+    "tauHatFlrNir": {
+      "label": "a.tauHatFlrNir",
+      "def": "@(x,a,u,d,p)1-(p.rhoFlrNir)",
+      "val": [
+        [
+          0,
+          0.5
+        ],
+        [
+          300,
+          0.5
+        ]
+      ]
+    },
+    "tauHatCanNir": {
+      "label": "a.tauHatCanNir",
+      "def": "@(x,a,u,d,p)exp((-1*(p.kNir))*(a.lai))",
+      "val": [
+        [
+          0,
+          0.9691159876087416
+        ],
+        [
+          300,
+          0.9691168987425703
+        ]
+      ]
+    },
+    "rhoHatCanNir": {
+      "label": "a.rhoHatCanNir",
+      "def": "@(x,a,u,d,p)(p.rhoCanNir)*(1-(a.tauHatCanNir))",
+      "val": [
+        [
+          0,
+          0.01080940433694043
+        ],
+        [
+          300,
+          0.010809085440100353
+        ]
+      ]
+    },
+    "tauCovCanNir": {
+      "label": "a.tauCovCanNir",
+      "def": "@(x,a,u,d,p)((a.tauHatCovNir).*(a.tauHatCanNir))./(1-((a.rhoCovNir).*(a.rhoHatCanNir)))",
+      "val": [
+        [
+          0,
+          0.5888979493828339
+        ],
+        [
+          300,
+          0.5972797172296794
+        ]
+      ]
+    },
+    "rhoCovCanNirUp": {
+      "label": "a.rhoCovCanNirUp",
+      "def": "@(x,a,u,d,p)a.rhoCovNir+(((a.tauHatCovNir).^2).*(a.rhoHatCanNir))./(1-((a.rhoCovNir).*(a.rhoHatCanNir)))",
+      "val": [
+        [
+          0,
+          0.3989034121992589
+        ],
+        [
+          300,
+          0.3903483981126541
+        ]
+      ]
+    },
+    "rhoCovCanNirDn": {
+      "label": "a.rhoCovCanNirDn",
+      "def": "@(x,a,u,d,p)a.rhoHatCanNir+(((a.tauHatCanNir).^2).*(a.rhoCovNir))./(1-((a.rhoCovNir).*(a.rhoHatCanNir)))",
+      "val": [
+        [
+          0,
+          0.38331130764806903
+        ],
+        [
+          300,
+          0.3751004379797422
+        ]
+      ]
+    },
+    "tauCovCanFlrNir": {
+      "label": "a.tauCovCanFlrNir",
+      "def": "@(x,a,u,d,p)((a.tauCovCanNir).*(a.tauHatFlrNir))./(1-((a.rhoCovCanNirDn).*(p.rhoFlrNir)))",
+      "val": [
+        [
+          0,
+          0.3642618100619701
+        ],
+        [
+          300,
+          0.3675794684116188
+        ]
+      ]
+    },
+    "rhoCovCanFlrNir": {
+      "label": "a.rhoCovCanFlrNir",
+      "def": "@(x,a,u,d,p)a.rhoCovCanNirUp+(((a.tauCovCanNir).^2).*(p.rhoFlrNir))./(1-((a.rhoCovCanNirDn).*(p.rhoFlrNir)))",
+      "val": [
+        [
+          0,
+          0.6134164451832325
+        ],
+        [
+          300,
+          0.6098961590649826
+        ]
+      ]
+    },
+    "aCanNir": {
+      "label": "a.aCanNir",
+      "def": "@(x,a,u,d,p)1-(a.tauCovCanFlrNir)-(a.rhoCovCanFlrNir)",
+      "val": [
+        [
+          0,
+          0.022321744754797423
+        ],
+        [
+          300,
+          0.0225243725233986
+        ]
+      ]
+    },
+    "aFlrNir": {
+      "label": "a.aFlrNir",
+      "def": "@(x,a,u,d,p)a.tauCovCanFlrNir",
+      "val": [
+        [
+          0,
+          0.3642618100619701
+        ],
+        [
+          300,
+          0.3675794684116188
+        ]
+      ]
+    },
+    "rNirSunCan": {
+      "label": "a.rNirSunCan",
+      "def": "@(x,a,u,d,p)(((1-(p.etaGlobAir)).*(a.aCanNir)).*(p.etaGlobNir)).*(d.iGlob)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rNirLampCan": {
+      "label": "a.rNirLampCan",
+      "def": "@(x,a,u,d,p)(((p.etaLampNir).*(a.qLampIn)).*(1-(p.rhoCanNir))).*(1-(exp((-1*(p.kNir))*(a.lai))))",
+      "val": [
+        [
+          0,
+          0.02676614407242393
+        ],
+        [
+          300,
+          0.026765354423105642
+        ]
+      ]
+    },
+    "rNirIntLampCan": {
+      "label": "a.rNirIntLampCan",
+      "def": "@(x,a,u,d,p)(((p.etaIntLampNir).*(a.qIntLampIn)).*(a.fIntLampCanNir)).*(1-(p.rhoCanNir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rNirSunFlr": {
+      "label": "a.rNirSunFlr",
+      "def": "@(x,a,u,d,p)(((1-(p.etaGlobAir)).*(a.aFlrNir)).*(p.etaGlobNir)).*(d.iGlob)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rNirLampFlr": {
+      "label": "a.rNirLampFlr",
+      "def": "@(x,a,u,d,p)(((1-(p.rhoFlrNir)).*(exp((-1*(p.kNir))*(a.lai)))).*(p.etaLampNir)).*(a.qLampIn)",
+      "val": [
+        [
+          0,
+          0.6460773250724944
+        ],
+        [
+          300,
+          0.646077932495047
+        ]
+      ]
+    },
+    "rNirIntLampFlr": {
+      "label": "a.rNirIntLampFlr",
+      "def": "@(x,a,u,d,p)((((p.fIntLampDown).*(1-(p.rhoFlrNir))).*(exp(((-1*(p.kIntNir))*(a.lai)).*(p.vIntLampPos)))).*(p.etaIntLampNir)).*(a.qIntLampIn)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParSunFlr": {
+      "label": "a.rParSunFlr",
+      "def": "@(x,a,u,d,p)((1-(p.rhoFlrPar)).*(exp((-1*(p.k1Par))*(a.lai)))).*(a.rParGhSun)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rParLampFlr": {
+      "label": "a.rParLampFlr",
+      "def": "@(x,a,u,d,p)((1-(p.rhoFlrPar)).*(exp((-1*(p.k1Par))*(a.lai)))).*(a.rParGhLamp)",
+      "val": [
+        [
+          0,
+          11.928303114949246
+        ],
+        [
+          300,
+          11.928332189946406
+        ]
+      ]
+    },
+    "rParIntLampFlr": {
+      "label": "a.rParIntLampFlr",
+      "def": "@(x,a,u,d,p)(((a.rParGhIntLamp).*(p.fIntLampDown)).*(1-(p.rhoFlrPar))).*(exp(((-1*(p.k1IntPar))*(a.lai)).*(p.vIntLampPos)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rLampAir": {
+      "label": "a.rLampAir",
+      "def": "@(x,a,u,d,p)(p.etaLampPar+p.etaLampNir)*(a.qLampIn)-(a.rParLampCan)-(a.rNirLampCan)-(a.rParLampFlr)-(a.rNirLampFlr)",
+      "val": [
+        [
+          0,
+          21.405926396812948
+        ],
+        [
+          300,
+          21.406017132142843
+        ]
+      ]
+    },
+    "rIntLampAir": {
+      "label": "a.rIntLampAir",
+      "def": "@(x,a,u,d,p)(p.etaIntLampPar+p.etaIntLampNir)*(a.qIntLampIn)-(a.rParIntLampCan)-(a.rNirIntLampCan)-(a.rParIntLampFlr)-(a.rNirIntLampFlr)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rGlobSunAir": {
+      "label": "a.rGlobSunAir",
+      "def": "@(x,a,u,d,p)((p.etaGlobAir)*(d.iGlob)).*((a.tauCovPar)*(p.etaGlobPar)+(a.aCanNir+a.aFlrNir)*(p.etaGlobNir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rGlobSunCovE": {
+      "label": "a.rGlobSunCovE",
+      "def": "@(x,a,u,d,p)((a.aCovPar)*(p.etaGlobPar)+(a.aCovNir)*(p.etaGlobNir)).*(d.iGlob)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tauThScrFirU": {
+      "label": "a.tauThScrFirU",
+      "def": "@(x,a,u,d,p)1-((u.thScr)*(1-(p.tauThScrFir)))",
+      "val": [
+        [
+          0,
+          0.1500008499231278
+        ],
+        [
+          300,
+          0.1765892146347376
+        ]
+      ]
+    },
+    "tauBlScrFirU": {
+      "label": "a.tauBlScrFirU",
+      "def": "@(x,a,u,d,p)1-((u.blScr)*(1-(p.tauBlScrFir)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "aCan": {
+      "label": "a.aCan",
+      "def": "@(x,a,u,d,p)1-(exp((-1*(p.kFir))*(a.lai)))",
+      "val": [
+        [
+          0,
+          0.10346457505563988
+        ],
+        [
+          300,
+          0.10346164052624623
+        ]
+      ]
+    },
+    "rCanCovIn": {
+      "label": "a.rCanCovIn",
+      "def": "@(x,a,u,d,p)(((((a.aCan).*(p.epsCan)).*(a.epsCovFir)).*(((p.tauLampFir)*(a.tauThScrFirU)).*(a.tauBlScrFirU)))*5.67e-08).*((x.tCan+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0.29096436681422105
+        ],
+        [
+          300,
+          1.2251697992088626
+        ]
+      ]
+    },
+    "rCanSky": {
+      "label": "a.rCanSky",
+      "def": "@(x,a,u,d,p)(((((a.aCan).*(p.epsCan)).*(p.epsSky)).*((((p.tauLampFir)*(a.tauCovFir)).*(a.tauThScrFirU)).*(a.tauBlScrFirU)))*5.67e-08).*((x.tCan+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCanThScr": {
+      "label": "a.rCanThScr",
+      "def": "@(x,a,u,d,p)(((((a.aCan).*(p.epsCan)).*(p.epsThScrFir)).*(((p.tauLampFir)*(u.thScr)).*(a.tauBlScrFirU)))*5.67e-08).*((x.tCan+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          1.5289790294085468
+        ],
+        [
+          300,
+          1.630290230835619
+        ]
+      ]
+    },
+    "rCanFlr": {
+      "label": "a.rCanFlr",
+      "def": "@(x,a,u,d,p)(((((a.aCan).*(p.epsCan)).*(p.epsFlr)).*(p.fCanFlr))*5.67e-08).*((x.tCan+273.15).^4-((x.tFlr+273.15).^4))",
+      "val": [
+        [
+          0,
+          2.1001087046160607
+        ],
+        [
+          300,
+          0.20059082163086187
+        ]
+      ]
+    },
+    "rPipeCovIn": {
+      "label": "a.rPipeCovIn",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(a.epsCovFir)).*((((((p.tauIntLampFir)*(p.tauLampFir))*(a.tauThScrFirU)).*(a.tauBlScrFirU))*0.49).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tPipe+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1.415269607537792
+        ]
+      ]
+    },
+    "rPipeSky": {
+      "label": "a.rPipeSky",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(p.epsSky)).*(((((((p.tauIntLampFir)*(p.tauLampFir))*(a.tauCovFir)).*(a.tauThScrFirU)).*(a.tauBlScrFirU))*0.49).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tPipe+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rPipeThScr": {
+      "label": "a.rPipeThScr",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(p.epsThScrFir)).*((((((p.tauIntLampFir)*(p.tauLampFir))*(u.thScr)).*(a.tauBlScrFirU))*0.49).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tPipe+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          3.3752212259574805
+        ]
+      ]
+    },
+    "rPipeFlr": {
+      "label": "a.rPipeFlr",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(p.epsFlr)).*0.49)*5.67e-08).*((x.tPipe+273.15).^4-((x.tFlr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          3.9650447094078634
+        ]
+      ]
+    },
+    "rPipeCan": {
+      "label": "a.rPipeCan",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(p.epsCan)).*(0.49.*(1-(exp((-1*(p.kFir))*(a.lai))))))*5.67e-08).*((x.tPipe+273.15).^4-((x.tCan+273.15).^4))",
+      "val": [
+        [
+          0,
+          -0.20109946459180955
+        ],
+        [
+          300,
+          0.39102211666042985
+        ]
+      ]
+    },
+    "rFlrCovIn": {
+      "label": "a.rFlrCovIn",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsFlr)).*(a.epsCovFir)).*((((((p.tauIntLampFir)*(p.tauLampFir))*(a.tauThScrFirU)).*(a.tauBlScrFirU))*(1-((1.5394*(p.lPipe))*(p.phiPipeE)))).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tFlr+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          9.319041306662369
+        ]
+      ]
+    },
+    "rFlrSky": {
+      "label": "a.rFlrSky",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsFlr)).*(p.epsSky)).*(((((((p.tauIntLampFir)*(p.tauLampFir))*(a.tauCovFir)).*(a.tauThScrFirU)).*(a.tauBlScrFirU))*(1-((1.5394*(p.lPipe))*(p.phiPipeE)))).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tFlr+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rFlrThScr": {
+      "label": "a.rFlrThScr",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsFlr)).*(p.epsThScrFir)).*((((((p.tauIntLampFir)*(p.tauLampFir))*(u.thScr)).*(a.tauBlScrFirU))*(1-((1.5394*(p.lPipe))*(p.phiPipeE)))).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tFlr+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          11.63515138308664
+        ]
+      ]
+    },
+    "rThScrCovIn": {
+      "label": "a.rThScrCovIn",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsThScrFir)).*(a.epsCovFir)).*(u.thScr))*5.67e-08).*((x.tThScr+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          30.744709768059053
+        ]
+      ]
+    },
+    "rThScrSky": {
+      "label": "a.rThScrSky",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsThScrFir)).*(p.epsSky)).*((a.tauCovFir).*(u.thScr)))*5.67e-08).*((x.tThScr+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCovESky": {
+      "label": "a.rCovESky",
+      "def": "@(x,a,u,d,p)((((1.*(a.aCovFir)).*(p.epsSky)).*1)*5.67e-08).*((x.tCovE+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          140.32093129200877
+        ],
+        [
+          300,
+          72.8926641198139
+        ]
+      ]
+    },
+    "rFirLampFlr": {
+      "label": "a.rFirLampFlr",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampBottom)).*(p.epsFlr)).*(((p.tauIntLampFir).*(1-((1.5394*(p.lPipe))*(p.phiPipeE)))).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tLamp+273.15).^4-((x.tFlr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1.0275453216537955
+        ]
+      ]
+    },
+    "rLampPipe": {
+      "label": "a.rLampPipe",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampBottom)).*(p.epsPipe)).*((((((p.tauIntLampFir).*0.49)*3.1416)*(p.lPipe))*(p.phiPipeE)).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tLamp+273.15).^4-((x.tPipe+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.03582960360615508
+        ]
+      ]
+    },
+    "rFirLampCan": {
+      "label": "a.rFirLampCan",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampBottom)).*(p.epsCan)).*(a.aCan))*5.67e-08).*((x.tLamp+273.15).^4-((x.tCan+273.15).^4))",
+      "val": [
+        [
+          0,
+          -0.040983944296702046
+        ],
+        [
+          300,
+          0.12756879522676015
+        ]
+      ]
+    },
+    "rLampThScr": {
+      "label": "a.rLampThScr",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampTop)).*(p.epsThScrFir)).*((u.thScr).*(a.tauBlScrFirU)))*5.67e-08).*((x.tLamp+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1.0832625116805978
+        ]
+      ]
+    },
+    "rLampCovIn": {
+      "label": "a.rLampCovIn",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampTop)).*(a.epsCovFir)).*((a.tauThScrFirU).*(a.tauBlScrFirU)))*5.67e-08).*((x.tLamp+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.39774385562344505
+        ]
+      ]
+    },
+    "rLampSky": {
+      "label": "a.rLampSky",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampTop)).*(p.epsSky)).*(((a.tauCovFir).*(a.tauThScrFirU)).*(a.tauBlScrFirU)))*5.67e-08).*((x.tLamp+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rGroPipeCan": {
+      "label": "a.rGroPipeCan",
+      "def": "@(x,a,u,d,p)(((((p.aGroPipe).*(p.epsGroPipe)).*(p.epsCan)).*1)*5.67e-08).*((x.tGroPipe+273.15).^4-((x.tCan+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rFlrBlScr": {
+      "label": "a.rFlrBlScr",
+      "def": "@(x,a,u,d,p)((((1.*(p.epsFlr)).*(p.epsBlScrFir)).*(((((p.tauIntLampFir)*(p.tauLampFir))*(u.blScr))*(1-((1.5394*(p.lPipe))*(p.phiPipeE)))).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tFlr+273.15).^4-((x.tBlScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rPipeBlScr": {
+      "label": "a.rPipeBlScr",
+      "def": "@(x,a,u,d,p)(((((p.aPipe).*(p.epsPipe)).*(p.epsBlScrFir)).*(((((p.tauIntLampFir)*(p.tauLampFir))*(u.blScr))*0.49).*(exp((-1*(p.kFir))*(a.lai)))))*5.67e-08).*((x.tPipe+273.15).^4-((x.tBlScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rCanBlScr": {
+      "label": "a.rCanBlScr",
+      "def": "@(x,a,u,d,p)(((((a.aCan).*(p.epsCan)).*(p.epsBlScrFir)).*((p.tauLampFir)*(u.blScr)))*5.67e-08).*((x.tCan+273.15).^4-((x.tBlScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rBlScrThScr": {
+      "label": "a.rBlScrThScr",
+      "def": "@(x,a,u,d,p)(((((u.blScr).*(p.epsBlScrFir)).*(p.epsThScrFir)).*(u.thScr))*5.67e-08).*((x.tBlScr+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rBlScrCovIn": {
+      "label": "a.rBlScrCovIn",
+      "def": "@(x,a,u,d,p)(((((u.blScr).*(p.epsBlScrFir)).*(a.epsCovFir)).*(a.tauThScrFirU))*5.67e-08).*((x.tBlScr+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rBlScrSky": {
+      "label": "a.rBlScrSky",
+      "def": "@(x,a,u,d,p)(((((u.blScr).*(p.epsBlScrFir)).*(p.epsSky)).*((a.tauCovFir).*(a.tauThScrFirU)))*5.67e-08).*((x.tBlScr+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rLampBlScr": {
+      "label": "a.rLampBlScr",
+      "def": "@(x,a,u,d,p)(((((p.aLamp).*(p.epsLampTop)).*(p.epsBlScrFir)).*(u.blScr))*5.67e-08).*((x.tLamp+273.15).^4-((x.tBlScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "fIntLampCanUp": {
+      "label": "a.fIntLampCanUp",
+      "def": "@(x,a,u,d,p)1-(exp(((-1*(p.kIntFir))*(1-(p.vIntLampPos))).*(a.lai)))",
+      "val": [
+        [
+          0,
+          0.10346457505563988
+        ],
+        [
+          300,
+          0.10346164052624623
+        ]
+      ]
+    },
+    "fIntLampCanDown": {
+      "label": "a.fIntLampCanDown",
+      "def": "@(x,a,u,d,p)1-(exp(((-1*(p.kIntFir))*(p.vIntLampPos)).*(a.lai)))",
+      "val": [
+        [
+          0,
+          0.10346457505563988
+        ],
+        [
+          300,
+          0.10346164052624623
+        ]
+      ]
+    },
+    "rFirIntLampFlr": {
+      "label": "a.rFirIntLampFlr",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsFlr)).*((1-((1.5394*(p.lPipe))*(p.phiPipeE))).*(1-(a.fIntLampCanDown))))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tFlr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampPipe": {
+      "label": "a.rIntLampPipe",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsPipe)).*(((1.5394*(p.lPipe))*(p.phiPipeE)).*(1-(a.fIntLampCanDown))))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tPipe+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rFirIntLampCan": {
+      "label": "a.rFirIntLampCan",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsCan)).*(a.fIntLampCanDown+a.fIntLampCanUp))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tCan+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampLamp": {
+      "label": "a.rIntLampLamp",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsLampBottom)).*((1-(a.fIntLampCanUp)).*(p.aLamp)))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tLamp+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampBlScr": {
+      "label": "a.rIntLampBlScr",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsBlScrFir)).*(((u.blScr).*(p.tauLampFir)).*(1-(a.fIntLampCanUp))))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tBlScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampThScr": {
+      "label": "a.rIntLampThScr",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsThScrFir)).*((((u.thScr).*(a.tauBlScrFirU)).*(p.tauLampFir)).*(1-(a.fIntLampCanUp))))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tThScr+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampCovIn": {
+      "label": "a.rIntLampCovIn",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(a.epsCovFir)).*((((a.tauThScrFirU).*(a.tauBlScrFirU)).*(p.tauLampFir)).*(1-(a.fIntLampCanUp))))*5.67e-08).*((x.tIntLamp+273.15).^4-((x.tCovIn+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "rIntLampSky": {
+      "label": "a.rIntLampSky",
+      "def": "@(x,a,u,d,p)(((((p.aIntLamp).*(p.epsIntLamp)).*(p.epsSky)).*(((((a.tauCovFir).*(a.tauThScrFirU)).*(a.tauBlScrFirU)).*(p.tauLampFir)).*(1-(a.fIntLampCanUp))))*5.67e-08).*((x.tIntLamp+273.15).^4-((d.tSky+273.15).^4))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "aRoofU": {
+      "label": "a.aRoofU",
+      "def": "@(x,a,u,d,p)(u.roof)*(p.aRoof)",
+      "val": [
+        [
+          0,
+          0.0046755771120912115
+        ],
+        [
+          300,
+          146.27196192003873
+        ]
+      ]
+    },
+    "aRoofUMax": {
+      "label": "a.aRoofUMax",
+      "def": "@(x,a,u,d,p)p.aRoof",
+      "val": [
+        [
+          0,
+          4676
+        ],
+        [
+          300,
+          4676
+        ]
+      ]
+    },
+    "aRoofMin": {
+      "label": "a.aRoofMin",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "aSideU": {
+      "label": "a.aSideU",
+      "def": "@(x,a,u,d,p)(u.side)*(p.aSide)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "etaRoof": {
+      "label": "a.etaRoof",
+      "def": "@(x,a,u,d,p)1",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "etaRoofNoSide": {
+      "label": "a.etaRoofNoSide",
+      "def": "@(x,a,u,d,p)1",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "etaSide": {
+      "label": "a.etaSide",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "cD": {
+      "label": "a.cD",
+      "def": "@(x,a,u,d,p)(p.cDgh)*(1-((p.etaShScrCd)*(u.shScr)))",
+      "val": [
+        [
+          0,
+          0.75
+        ],
+        [
+          300,
+          0.75
+        ]
+      ]
+    },
+    "cW": {
+      "label": "a.cW",
+      "def": "@(x,a,u,d,p)(p.cWgh)*(1-((p.etaShScrCw)*(u.shScr)))",
+      "val": [
+        [
+          0,
+          0.09
+        ],
+        [
+          300,
+          0.09
+        ]
+      ]
+    },
+    "fVentRoof2": {
+      "label": "a.fVentRoof2",
+      "def": "@(x,a,u,d,p)((((u.roof)*(p.aRoof)).*(a.cD))/(2.*(p.aFlr))).*(sqrt(abs((((p.g)*(p.hVent))*(x.tAir-(d.tOut)))./(2*(0.5*(x.tAir)+0.5*(d.tOut)+273.15))+(a.cW).*((d.wind).^2))))",
+      "val": [
+        [
+          0,
+          4.505332806299579e-08
+        ],
+        [
+          300,
+          0.0014259333702131356
+        ]
+      ]
+    },
+    "fVentRoof2Max": {
+      "label": "a.fVentRoof2Max",
+      "def": "@(x,a,u,d,p)(((p.aRoof).*(a.cD))/(2.*(p.aFlr))).*(sqrt(abs((((p.g)*(p.hVent))*(x.tAir-(d.tOut)))./(2*(0.5*(x.tAir)+0.5*(d.tOut)+273.15))+(a.cW).*((d.wind).^2))))",
+      "val": [
+        [
+          0,
+          0.045057402962678066
+        ],
+        [
+          300,
+          0.045584022744982904
+        ]
+      ]
+    },
+    "fVentRoof2Min": {
+      "label": "a.fVentRoof2Min",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "fVentRoofSide2": {
+      "label": "a.fVentRoofSide2",
+      "def": "@(x,a,u,d,p)((a.cD)/(p.aFlr)).*(sqrt(((((a.aRoofU).*(a.aSideU))./(sqrt(max((a.aRoofU).^2+(a.aSideU).^2,0.01)))).^2).*((((2*(p.g))*(p.hSideRoof))*(x.tAir-(d.tOut)))./(0.5*(x.tAir)+0.5*(d.tOut)+273.15))+((((a.aRoofU+a.aSideU)/2).^2).*(a.cW)).*((d.wind).^2)))",
+      "val": [
+        [
+          0,
+          3.287515156939132e-08
+        ],
+        [
+          300,
+          0.001028474732250272
+        ]
+      ]
+    },
+    "fVentSide2": {
+      "label": "a.fVentSide2",
+      "def": "@(x,a,u,d,p)((((a.cD).*(a.aSideU)).*(d.wind))/(2*(p.aFlr))).*(sqrt(a.cW))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "fLeakage": {
+      "label": "a.fLeakage",
+      "def": "@(x,a,u,d,p)(d.wind<p.minWind).*((p.minWind)*(p.cLeakage))+(1-(d.wind<p.minWind)).*((p.cLeakage)*(d.wind))",
+      "val": [
+        [
+          0,
+          0.00025
+        ],
+        [
+          300,
+          0.00025
+        ]
+      ]
+    },
+    "fVentRoof": {
+      "label": "a.fVentRoof",
+      "def": "@(x,a,u,d,p)(1>=p.etaRoofThr).*((p.etaInsScr)*(a.fVentRoof2)+(p.cLeakTop)*(a.fLeakage))+(1-(1>=p.etaRoofThr)).*((p.etaInsScr)*((max(u.thScr,u.blScr)).*(a.fVentRoof2)+((1-(max(u.thScr,u.blScr))).*(a.fVentRoofSide2)).*(a.etaRoof))+(p.cLeakTop)*(a.fLeakage))",
+      "val": [
+        [
+          0,
+          0.000125045053328063
+        ],
+        [
+          300,
+          0.0015509333702131358
+        ]
+      ]
+    },
+    "fVentSide": {
+      "label": "a.fVentSide",
+      "def": "@(x,a,u,d,p)(1>=p.etaRoofThr).*((p.etaInsScr)*(a.fVentSide2)+(1-(p.cLeakTop))*(a.fLeakage))+(1-(1>=p.etaRoofThr)).*((p.etaInsScr)*((max(u.thScr,u.blScr)).*(a.fVentSide2)+((1-(max(u.thScr,u.blScr))).*(a.fVentRoofSide2)).*(a.etaSide))+(1-(p.cLeakTop))*(a.fLeakage))",
+      "val": [
+        [
+          0,
+          0.000125
+        ],
+        [
+          300,
+          0.000125
+        ]
+      ]
+    },
+    "timeOfDay": {
+      "label": "a.timeOfDay",
+      "def": "@(x,a,u,d,p)24*(x.time-(floor(x.time)))",
+      "val": [
+        [
+          0,
+          0.9999999990686774
+        ],
+        [
+          300,
+          1.0833333379899464
+        ]
+      ]
+    },
+    "dayOfYear": {
+      "label": "a.dayOfYear",
+      "def": "@(x,a,u,d,p)mod(x.time,365.2425)",
+      "val": [
+        [
+          0,
+          1.829166666614185
+        ],
+        [
+          300,
+          1.8326388890692378
+        ]
+      ]
+    },
+    "lampTimeOfDay": {
+      "label": "a.lampTimeOfDay",
+      "def": "@(x,a,u,d,p)(((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(a.timeOfDay))&((a.timeOfDay)<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(a.timeOfDay))|((a.timeOfDay)<(p.lampsOff)))).*1",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "lampDayOfYear": {
+      "label": "a.lampDayOfYear",
+      "def": "@(x,a,u,d,p)(((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(a.dayOfYear))&((a.dayOfYear)<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(a.dayOfYear))|((a.dayOfYear)<(p.dayLampStop)))).*1",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "lampNoCons": {
+      "label": "a.lampNoCons",
+      "def": "@(x,a,u,d,p)(((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*(a.lampTimeOfDay)).*(a.lampDayOfYear)",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "linearLampSwitchOn": {
+      "label": "a.linearLampSwitchOn",
+      "def": "@(x,a,u,d,p)max(0,min(1,a.timeOfDay-(p.lampsOn)+1))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "linearLampSwitchOff": {
+      "label": "a.linearLampSwitchOff",
+      "def": "@(x,a,u,d,p)max(0,min(1,p.lampsOff-(a.timeOfDay)+1))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "linearLampBothSwitches": {
+      "label": "a.linearLampBothSwitches",
+      "def": "@(x,a,u,d,p)((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(a.linearLampSwitchOn,a.linearLampSwitchOff))+(1-((p.lampsOn)<(p.lampsOff))).*(max(a.linearLampSwitchOn,a.linearLampSwitchOff)))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "smoothLamp": {
+      "label": "a.smoothLamp",
+      "def": "@(x,a,u,d,p)((a.linearLampBothSwitches).*((d.dayRadSum)<(p.lampRadSumLimit))).*(a.lampDayOfYear)",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "isDayInside": {
+      "label": "a.isDayInside",
+      "def": "@(x,a,u,d,p)max(a.smoothLamp,d.isDay)",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "mechAllowed": {
+      "label": "a.mechAllowed",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hotBufAllowed": {
+      "label": "a.hotBufAllowed",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "heatSetPoint": {
+      "label": "a.heatSetPoint",
+      "def": "@(x,a,u,d,p)(a.isDayInside)*(p.tSpDay)+(1-(a.isDayInside))*(p.tSpNight)+(p.heatCorrection)*(a.lampNoCons)",
+      "val": [
+        [
+          0,
+          19.5
+        ],
+        [
+          300,
+          19.5
+        ]
+      ]
+    },
+    "heatMax": {
+      "label": "a.heatMax",
+      "def": "@(x,a,u,d,p)a.heatSetPoint+p.heatDeadZone",
+      "val": [
+        [
+          0,
+          24.5
+        ],
+        [
+          300,
+          24.5
+        ]
+      ]
+    },
+    "co2SetPoint": {
+      "label": "a.co2SetPoint",
+      "def": "@(x,a,u,d,p)(a.isDayInside)*(p.co2SpDay)",
+      "val": [
+        [
+          0,
+          1000
+        ],
+        [
+          300,
+          1000
+        ]
+      ]
+    },
+    "co2InPpm": {
+      "label": "a.co2InPpm",
+      "def": "@(x,a,u,d,p)((8314459.8*(x.tAir+273.15)).*(1e-06*(x.co2Air)))/4459.3133",
+      "val": [
+        [
+          0,
+          443.0386072316511
+        ],
+        [
+          300,
+          572.1992416851211
+        ]
+      ]
+    },
+    "ventHeat": {
+      "label": "a.ventHeat",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.ventHeatPband)).*4.6052).*(x.tAir-(a.heatMax)-((p.ventHeatPband)/2)))))",
+      "val": [
+        [
+          0,
+          9.998509409508761e-11
+        ],
+        [
+          300,
+          1.3403468862847005e-09
+        ]
+      ]
+    },
+    "rhIn": {
+      "label": "a.rhIn",
+      "def": "@(x,a,u,d,p)(100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))",
+      "val": [
+        [
+          0,
+          90
+        ],
+        [
+          300,
+          82.29435466377468
+        ]
+      ]
+    },
+    "ventRh": {
+      "label": "a.ventRh",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.ventRhPband)).*4.6052).*(a.rhIn-(p.rhMax+(a.mechAllowed).*(p.mechDehumidPband))-((p.ventRhPband)/2)))))",
+      "val": [
+        [
+          0,
+          0.40892382718895964
+        ],
+        [
+          300,
+          0.14333559920934758
+        ]
+      ]
+    },
+    "ventCold": {
+      "label": "a.ventCold",
+      "def": "@(x,a,u,d,p)1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-(a.heatSetPoint-(p.tVentOff))-((p.ventColdPband)/2)))))",
+      "val": [
+        [
+          0,
+          9.999095620383258e-07
+        ],
+        [
+          300,
+          0.03128142898204421
+        ]
+      ]
+    },
+    "thScrSp": {
+      "label": "a.thScrSp",
+      "def": "@(x,a,u,d,p)(d.isDay).*(p.thScrSpDay)+(1-(d.isDay)).*(p.thScrSpNight)",
+      "val": [
+        [
+          0,
+          10
+        ],
+        [
+          300,
+          10
+        ]
+      ]
+    },
+    "thScrCold": {
+      "label": "a.thScrCold",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.thScrPband)).*4.6052).*(d.tOut-(a.thScrSp)-((p.thScrPband)/2)))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "thScrHeat": {
+      "label": "a.thScrHeat",
+      "def": "@(x,a,u,d,p)1+-1.*(1./(1+exp(((-2./(-1*(p.thScrPband))).*4.6052).*(x.tAir-(a.heatSetPoint+p.thScrDeadZone)-((-1*(p.thScrPband))/2)))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "thScrRh": {
+      "label": "a.thScrRh",
+      "def": "@(x,a,u,d,p)max(1+-1.*(1./(1+exp(((-2./(p.thScrRhPband)).*4.6052).*(a.rhIn-(p.rhMax+p.thScrRh)-((p.thScrRhPband)/2))))),1-(a.ventCold))",
+      "val": [
+        [
+          0,
+          0.999999000090438
+        ],
+        [
+          300,
+          0.9687185710179558
+        ]
+      ]
+    },
+    "lampOn": {
+      "label": "a.lampOn",
+      "def": "@(x,a,u,d,p)((a.lampNoCons).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-(a.heatMax+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*(a.rhIn-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(a.ventCold))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "intLampOn": {
+      "label": "a.intLampOn",
+      "def": "@(x,a,u,d,p)((a.lampNoCons).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-(a.heatMax+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*(a.rhIn-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(a.ventCold))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "rhoTop": {
+      "label": "a.rhoTop",
+      "def": "@(x,a,u,d,p)((p.mAir)*(p.pressure))./((x.tTop+273.15)*(p.R))",
+      "val": [
+        [
+          0,
+          1.202225431169318
+        ],
+        [
+          300,
+          1.24033111198167
+        ]
+      ]
+    },
+    "rhoAir": {
+      "label": "a.rhoAir",
+      "def": "@(x,a,u,d,p)((p.mAir)*(p.pressure))./((x.tAir+273.15)*(p.R))",
+      "val": [
+        [
+          0,
+          1.202225431169318
+        ],
+        [
+          300,
+          1.1975646877980903
+        ]
+      ]
+    },
+    "rhoAirMean": {
+      "label": "a.rhoAirMean",
+      "def": "@(x,a,u,d,p)0.5*(a.rhoTop+a.rhoAir)",
+      "val": [
+        [
+          0,
+          1.202225431169318
+        ],
+        [
+          300,
+          1.2189478998898802
+        ]
+      ]
+    },
+    "fThScr": {
+      "label": "a.fThScr",
+      "def": "@(x,a,u,d,p)((u.thScr)*(p.kThScr)).*((abs(x.tAir-(x.tTop))).^0.66)+((1-(u.thScr))./(a.rhoAirMean)).*(sqrt((((0.5*(a.rhoAirMean)).*(1-(u.thScr))).*(p.g)).*(abs(a.rhoAir-(a.rhoTop)))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.002516909234609752
+        ]
+      ]
+    },
+    "fBlScr": {
+      "label": "a.fBlScr",
+      "def": "@(x,a,u,d,p)((u.blScr)*(p.kBlScr)).*((abs(x.tAir-(x.tTop))).^0.66)+((1-(u.blScr))./(a.rhoAirMean)).*(sqrt((((0.5*(a.rhoAirMean)).*(1-(u.blScr))).*(p.g)).*(abs(a.rhoAir-(a.rhoTop)))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.4148378776879173
+        ]
+      ]
+    },
+    "fScr": {
+      "label": "a.fScr",
+      "def": "@(x,a,u,d,p)min(a.fThScr,a.fBlScr)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.002516909234609752
+        ]
+      ]
+    },
+    "fVentForced": {
+      "label": "a.fVentForced",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hCanAir": {
+      "label": "a.hCanAir",
+      "def": "@(x,a,u,d,p)(abs((2*(p.alfaLeafAir))*(a.lai))).*(x.tCan-(x.tAir))",
+      "val": [
+        [
+          0,
+          4.647552
+        ],
+        [
+          300,
+          -0.8540591461421412
+        ]
+      ]
+    },
+    "hAirFlr": {
+      "label": "a.hAirFlr",
+      "def": "@(x,a,u,d,p)(abs((x.tFlr>x.tAir).*(1.7*(nthroot(abs(x.tFlr-(x.tAir)),3)))+(1-(x.tFlr>x.tAir)).*(1.3*(nthroot(abs(x.tAir-(x.tFlr)),4))))).*(x.tAir-(x.tFlr))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1.5051047199111587
+        ]
+      ]
+    },
+    "hAirThScr": {
+      "label": "a.hAirThScr",
+      "def": "@(x,a,u,d,p)(abs((1.7.*(u.thScr)).*(nthroot(abs(x.tAir-(x.tThScr)),3)))).*(x.tAir-(x.tThScr))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          15.291791687730202
+        ]
+      ]
+    },
+    "hAirBlScr": {
+      "label": "a.hAirBlScr",
+      "def": "@(x,a,u,d,p)(abs((1.7.*(u.blScr)).*(nthroot(abs(x.tAir-(x.tBlScr)),3)))).*(x.tAir-(x.tBlScr))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hAirOut": {
+      "label": "a.hAirOut",
+      "def": "@(x,a,u,d,p)(abs(((p.rhoAir)*(p.cPAir))*(a.fVentSide+a.fVentForced))).*(x.tAir-(d.tOut))",
+      "val": [
+        [
+          0,
+          3.277987987716942
+        ],
+        [
+          300,
+          3.4497628499434616
+        ]
+      ]
+    },
+    "hAirTop": {
+      "label": "a.hAirTop",
+      "def": "@(x,a,u,d,p)(abs(((p.rhoAir)*(p.cPAir))*(a.fScr))).*(x.tAir-(x.tTop))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          30.636342163475753
+        ]
+      ]
+    },
+    "hThScrTop": {
+      "label": "a.hThScrTop",
+      "def": "@(x,a,u,d,p)(abs((1.7.*(u.thScr)).*(nthroot(abs(x.tThScr-(x.tTop)),3)))).*(x.tThScr-(x.tTop))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          12.989421059288446
+        ]
+      ]
+    },
+    "hBlScrTop": {
+      "label": "a.hBlScrTop",
+      "def": "@(x,a,u,d,p)(abs((1.7.*(u.blScr)).*(nthroot(abs(x.tBlScr-(x.tTop)),3)))).*(x.tBlScr-(x.tTop))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hTopCovIn": {
+      "label": "a.hTopCovIn",
+      "def": "@(x,a,u,d,p)(abs((((p.cHecIn)*(nthroot(abs(x.tTop-(x.tCovIn)),3)))*(p.aCov))/(p.aFlr))).*(x.tTop-(x.tCovIn))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          27.299814577378402
+        ]
+      ]
+    },
+    "hTopOut": {
+      "label": "a.hTopOut",
+      "def": "@(x,a,u,d,p)(abs(((p.rhoAir)*(p.cPAir))*(a.fVentRoof))).*(x.tTop-(d.tOut))",
+      "val": [
+        [
+          0,
+          3.27916946186252
+        ],
+        [
+          300,
+          23.924535354614463
+        ]
+      ]
+    },
+    "hCovEOut": {
+      "label": "a.hCovEOut",
+      "def": "@(x,a,u,d,p)(abs(((p.aCov)/(p.aFlr))*(p.cHecOut1+(p.cHecOut2)*((d.wind).^(p.cHecOut3))))).*(x.tCovE-(d.tOut))",
+      "val": [
+        [
+          0,
+          151.5888
+        ],
+        [
+          300,
+          40.81049916171528
+        ]
+      ]
+    },
+    "hPipeAir": {
+      "label": "a.hPipeAir",
+      "def": "@(x,a,u,d,p)(abs(((6.2518*(p.phiPipeE))*(p.lPipe))*((abs(x.tPipe-(x.tAir))).^0.32))).*(x.tPipe-(x.tAir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          5.072030715431189
+        ]
+      ]
+    },
+    "hFlrSo1": {
+      "label": "a.hFlrSo1",
+      "def": "@(x,a,u,d,p)(abs(2/((p.hFlr)/(p.lambdaFlr)+(p.hSo1)/(p.lambdaSo)))).*(x.tFlr-(x.tSo1))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          4.6737535464602065
+        ]
+      ]
+    },
+    "hSo1So2": {
+      "label": "a.hSo1So2",
+      "def": "@(x,a,u,d,p)(abs((2*(p.lambdaSo))/(p.hSo1+p.hSo2))).*(x.tSo1-(x.tSo2))",
+      "val": [
+        [
+          0,
+          35.09664630639426
+        ],
+        [
+          300,
+          32.69297860338939
+        ]
+      ]
+    },
+    "hSo2So3": {
+      "label": "a.hSo2So3",
+      "def": "@(x,a,u,d,p)(abs((2*(p.lambdaSo))/(p.hSo2+p.hSo3))).*(x.tSo2-(x.tSo3))",
+      "val": [
+        [
+          0,
+          17.54832315319713
+        ],
+        [
+          300,
+          17.729244296441248
+        ]
+      ]
+    },
+    "hSo3So4": {
+      "label": "a.hSo3So4",
+      "def": "@(x,a,u,d,p)(abs((2*(p.lambdaSo))/(p.hSo3+p.hSo4))).*(x.tSo3-(x.tSo4))",
+      "val": [
+        [
+          0,
+          8.774161576598559
+        ],
+        [
+          300,
+          8.799710381595132
+        ]
+      ]
+    },
+    "hSo4So5": {
+      "label": "a.hSo4So5",
+      "def": "@(x,a,u,d,p)(abs((2*(p.lambdaSo))/(p.hSo4+p.hSo5))).*(x.tSo4-(x.tSo5))",
+      "val": [
+        [
+          0,
+          4.387080788299285
+        ],
+        [
+          300,
+          4.3891968266509735
+        ]
+      ]
+    },
+    "hSo5SoOut": {
+      "label": "a.hSo5SoOut",
+      "def": "@(x,a,u,d,p)(abs((2*(p.lambdaSo))/(p.hSo5+p.hSoOut))).*(x.tSo5-(d.tSoOut))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.0015067637788409142
+        ]
+      ]
+    },
+    "hCovInCovE": {
+      "label": "a.hCovInCovE",
+      "def": "@(x,a,u,d,p)(abs(1./((p.hRf)/(p.lambdaRf)+((u.shScrPer)*(p.hShScrPer))/(p.lambdaShScrPer)))).*(x.tCovIn-(x.tCovE))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          102.65860898465637
+        ]
+      ]
+    },
+    "hLampAir": {
+      "label": "a.hLampAir",
+      "def": "@(x,a,u,d,p)(abs(p.cHecLampAir)).*(x.tLamp-(x.tAir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          25.69393389687853
+        ]
+      ]
+    },
+    "hGroPipeAir": {
+      "label": "a.hGroPipeAir",
+      "def": "@(x,a,u,d,p)(abs(((6.2518*(p.phiGroPipeE))*(p.lGroPipe))*((abs(x.tGroPipe-(x.tAir))).^0.32))).*(x.tGroPipe-(x.tAir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          -0.4188162997948506
+        ]
+      ]
+    },
+    "hIntLampAir": {
+      "label": "a.hIntLampAir",
+      "def": "@(x,a,u,d,p)(abs(p.cHecIntLampAir)).*(x.tIntLamp-(x.tAir))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "sRs": {
+      "label": "a.sRs",
+      "def": "@(x,a,u,d,p)1./(1+exp((p.sRs).*(a.rCan-(p.rCanSp))))",
+      "val": [
+        [
+          0,
+          0.9999999999999964
+        ],
+        [
+          300,
+          0.9999999999999964
+        ]
+      ]
+    },
+    "cEvap3": {
+      "label": "a.cEvap3",
+      "def": "@(x,a,u,d,p)(p.cEvap3Night)*(1-(a.sRs))+(p.cEvap3Day)*(a.sRs)",
+      "val": [
+        [
+          0,
+          6.099999999999979e-07
+        ],
+        [
+          300,
+          6.099999999999979e-07
+        ]
+      ]
+    },
+    "cEvap4": {
+      "label": "a.cEvap4",
+      "def": "@(x,a,u,d,p)(p.cEvap4Night)*(1-(a.sRs))+(p.cEvap4Day)*(a.sRs)",
+      "val": [
+        [
+          0,
+          4.300000000000004e-06
+        ],
+        [
+          300,
+          4.300000000000004e-06
+        ]
+      ]
+    },
+    "rfRCan": {
+      "label": "a.rfRCan",
+      "def": "@(x,a,u,d,p)(a.rCan+p.cEvap1)./(a.rCan+p.cEvap2)",
+      "val": [
+        [
+          0,
+          1.096802654550842
+        ],
+        [
+          300,
+          1.096802654550842
+        ]
+      ]
+    },
+    "rfCo2": {
+      "label": "a.rfCo2",
+      "def": "@(x,a,u,d,p)min(1.5,1+(a.cEvap3).*(((p.etaMgPpm)*(x.co2Air)-200).^2))",
+      "val": [
+        [
+          0,
+          1.0395026607072118
+        ],
+        [
+          300,
+          1.0902747741845664
+        ]
+      ]
+    },
+    "rfVp": {
+      "label": "a.rfVp",
+      "def": "@(x,a,u,d,p)min(5.8,1+(a.cEvap4).*((610.78*(exp((17.2694*(x.tCan))./(x.tCan+238.3)))-(x.vpAir)).^2))",
+      "val": [
+        [
+          0,
+          3.2092002372610304
+        ],
+        [
+          300,
+          1.3007279863519636
+        ]
+      ]
+    },
+    "rS": {
+      "label": "a.rS",
+      "def": "@(x,a,u,d,p)(((p.rSMin).*(a.rfRCan)).*(a.rfCo2)).*(a.rfVp)",
+      "val": [
+        [
+          0,
+          300.03005817102513
+        ],
+        [
+          300,
+          127.54539812049693
+        ]
+      ]
+    },
+    "vecCanAir": {
+      "label": "a.vecCanAir",
+      "def": "@(x,a,u,d,p)(((2*(p.rhoAir))*(p.cPAir))*(a.lai))./(((p.L)*(p.gamma))*(p.rB+a.rS))",
+      "val": [
+        [
+          0,
+          3.0433740327817927e-09
+        ],
+        [
+          300,
+          4.347283829025497e-09
+        ]
+      ]
+    },
+    "mvCanAir": {
+      "label": "a.mvCanAir",
+      "def": "@(x,a,u,d,p)(610.78*(exp((17.2694*(x.tCan))./(x.tCan+238.3)))-(x.vpAir)).*(a.vecCanAir)",
+      "val": [
+        [
+          0,
+          2.181416749989313e-06
+        ],
+        [
+          300,
+          1.1496633613553487e-06
+        ]
+      ]
+    },
+    "mvPadAir": {
+      "label": "a.mvPadAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvFogAir": {
+      "label": "a.mvFogAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvBlowAir": {
+      "label": "a.mvBlowAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvAirOutPad": {
+      "label": "a.mvAirOutPad",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvAirThScr": {
+      "label": "a.mvAirThScr",
+      "def": "@(x,a,u,d,p)(((1./(1+exp(-0.1.*(x.vpAir-(610.78*(exp((17.2694*(x.tThScr))./(x.tThScr+238.3)))))))).*6.4e-09).*((1.7*(u.thScr)).*(nthroot(abs(x.tAir-(x.tThScr)),3)))).*(x.vpAir-(610.78*(exp((17.2694*(x.tThScr))./(x.tThScr+238.3)))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          4.138663224494434e-06
+        ]
+      ]
+    },
+    "mvAirBlScr": {
+      "label": "a.mvAirBlScr",
+      "def": "@(x,a,u,d,p)(((1./(1+exp(-0.1.*(x.vpAir-(610.78*(exp((17.2694*(x.tBlScr))./(x.tBlScr+238.3)))))))).*6.4e-09).*((1.7*(u.blScr)).*(nthroot(abs(x.tAir-(x.tBlScr)),3)))).*(x.vpAir-(610.78*(exp((17.2694*(x.tBlScr))./(x.tBlScr+238.3)))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvTopCovIn": {
+      "label": "a.mvTopCovIn",
+      "def": "@(x,a,u,d,p)(((1./(1+exp(-0.1.*(x.vpTop-(610.78*(exp((17.2694*(x.tCovIn))./(x.tCovIn+238.3)))))))).*6.4e-09).*((((p.cHecIn)*(nthroot(abs(x.tTop-(x.tCovIn)),3)))*(p.aCov))/(p.aFlr))).*(x.vpTop-(610.78*(exp((17.2694*(x.tCovIn))./(x.tCovIn+238.3)))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          8.583774157859907e-06
+        ]
+      ]
+    },
+    "mvAirTop": {
+      "label": "a.mvAirTop",
+      "def": "@(x,a,u,d,p)(0.002165*(abs(a.fScr))).*((x.vpAir)./(x.tAir+273.15)-((x.vpTop)./(x.tTop+273.15)))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1.191213836649327e-05
+        ]
+      ]
+    },
+    "mvTopOut": {
+      "label": "a.mvTopOut",
+      "def": "@(x,a,u,d,p)(0.002165*(abs(a.fVentRoof))).*((x.vpTop)./(x.tTop+273.15)-((d.vpOut)./(d.tOut+273.15)))",
+      "val": [
+        [
+          0,
+          1.297160933480651e-06
+        ],
+        [
+          300,
+          8.298437441080328e-06
+        ]
+      ]
+    },
+    "mvAirOut": {
+      "label": "a.mvAirOut",
+      "def": "@(x,a,u,d,p)(0.002165*(abs(a.fVentSide+a.fVentForced))).*((x.vpAir)./(x.tAir+273.15)-((d.vpOut)./(d.tOut+273.15)))",
+      "val": [
+        [
+          0,
+          1.296693570593986e-06
+        ],
+        [
+          300,
+          1.2604315559509874e-06
+        ]
+      ]
+    },
+    "lCanAir": {
+      "label": "a.lCanAir",
+      "def": "@(x,a,u,d,p)(p.L)*(a.mvCanAir)",
+      "val": [
+        [
+          0,
+          5.3444710374738165
+        ],
+        [
+          300,
+          2.8166752353206044
+        ]
+      ]
+    },
+    "lAirThScr": {
+      "label": "a.lAirThScr",
+      "def": "@(x,a,u,d,p)(p.L)*(a.mvAirThScr)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          10.139724900011364
+        ]
+      ]
+    },
+    "lAirBlScr": {
+      "label": "a.lAirBlScr",
+      "def": "@(x,a,u,d,p)(p.L)*(a.mvAirBlScr)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "lTopCovIn": {
+      "label": "a.lTopCovIn",
+      "def": "@(x,a,u,d,p)(p.L)*(a.mvTopCovIn)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          21.030246686756772
+        ]
+      ]
+    },
+    "parCan": {
+      "label": "a.parCan",
+      "def": "@(x,a,u,d,p)(p.zetaLampPar)*(a.rParLampCan)+(p.parJtoUmolSun)*(a.rParSunCan)+(p.zetaIntLampPar)*(a.rParIntLampCan)",
+      "val": [
+        [
+          0,
+          23.235068506625908
+        ],
+        [
+          300,
+          23.234421318603328
+        ]
+      ]
+    },
+    "j25CanMax": {
+      "label": "a.j25CanMax",
+      "def": "@(x,a,u,d,p)(a.lai)*(p.j25LeafMax)",
+      "val": [
+        [
+          0,
+          24.399648
+        ],
+        [
+          300,
+          24.398916756969633
+        ]
+      ]
+    },
+    "gamma": {
+      "label": "a.gamma",
+      "def": "@(x,a,u,d,p)((p.j25LeafMax./(a.j25CanMax)*1).*(p.cGamma)).*(x.tCan)+(20*(p.cGamma)).*(1-(p.j25LeafMax./(a.j25CanMax)*1))",
+      "val": [
+        [
+          0,
+          41.3156793081605
+        ],
+        [
+          300,
+          -11.472829115742092
+        ]
+      ]
+    },
+    "co2Stom": {
+      "label": "a.co2Stom",
+      "def": "@(x,a,u,d,p)(p.etaCo2AirStom)*(a.co2InPpm)",
+      "val": [
+        [
+          0,
+          296.8358668452062
+        ],
+        [
+          300,
+          383.37349192903116
+        ]
+      ]
+    },
+    "jPot": {
+      "label": "a.jPot",
+      "def": "@(x,a,u,d,p)(((a.j25CanMax).*(exp(((p.eJ)*(x.tCan+273.15-(p.t25k)))./(((0.001*(p.R))*(x.tCan+273.15))*(p.t25k))))).*(1+exp(((p.S)*(p.t25k)-(p.H))./((0.001*(p.R))*(p.t25k)))))./(1+exp(((p.S)*(x.tCan+273.15)-(p.H))./((0.001*(p.R))*(x.tCan+273.15))))",
+      "val": [
+        [
+          0,
+          19.91063677771811
+        ],
+        [
+          300,
+          16.58867165557486
+        ]
+      ]
+    },
+    "j": {
+      "label": "a.j",
+      "def": "@(x,a,u,d,p)(1/(2*(p.theta)))*(a.jPot+(p.alpha)*(a.parCan)-(sqrt((a.jPot+(p.alpha)*(a.parCan)).^2-((((4*(p.theta))*(a.jPot)).*(p.alpha)).*(a.parCan)))))",
+      "val": [
+        [
+          0,
+          7.5581253807577475
+        ],
+        [
+          300,
+          7.254073431218619
+        ]
+      ]
+    },
+    "p": {
+      "label": "a.p",
+      "def": "@(x,a,u,d,p)((a.j).*(a.co2Stom-(a.gamma)))./(4*(a.co2Stom+2*(a.gamma)))",
+      "val": [
+        [
+          0,
+          1.2723454656530853
+        ],
+        [
+          300,
+          1.9866974322661337
+        ]
+      ]
+    },
+    "r": {
+      "label": "a.r",
+      "def": "@(x,a,u,d,p)((a.p).*(a.gamma))./(a.co2Stom)",
+      "val": [
+        [
+          0,
+          0.1770938862166816
+        ],
+        [
+          300,
+          -0.059453876243951966
+        ]
+      ]
+    },
+    "hAirBuf": {
+      "label": "a.hAirBuf",
+      "def": "@(x,a,u,d,p)1./(1+exp(0.0005*(x.cBuf-(p.cBufMax))))",
+      "val": [
+        [
+          0,
+          0.9999546021312976
+        ],
+        [
+          300,
+          0.9999542261621543
+        ]
+      ]
+    },
+    "mcAirBuf": {
+      "label": "a.mcAirBuf",
+      "def": "@(x,a,u,d,p)((p.mCh2o)*(a.hAirBuf)).*(a.p-(a.r))",
+      "val": [
+        [
+          0,
+          0.03285605572047013
+        ],
+        [
+          300,
+          0.061381729449356465
+        ]
+      ]
+    },
+    "gTCan24": {
+      "label": "a.gTCan24",
+      "def": "@(x,a,u,d,p)0.047*(x.tCan24)+0.06",
+      "val": [
+        [
+          0,
+          1.0235
+        ],
+        [
+          300,
+          1.0230120831272265
+        ]
+      ]
+    },
+    "hTCan24": {
+      "label": "a.hTCan24",
+      "def": "@(x,a,u,d,p)((1./(1+exp(-1.1587*(x.tCan24-(p.tCan24Min))))).*1)./(1+exp(1.3904*(x.tCan24-(p.tCan24Max))))",
+      "val": [
+        [
+          0,
+          0.99447423350042
+        ],
+        [
+          300,
+          0.9945082767934786
+        ]
+      ]
+    },
+    "hTCan": {
+      "label": "a.hTCan",
+      "def": "@(x,a,u,d,p)((1./(1+exp(-0.869*(x.tCan-(p.tCanMin))))).*1)./(1+exp(0.5793*(x.tCan-(p.tCanMax))))",
+      "val": [
+        [
+          0,
+          0.9994898525558442
+        ],
+        [
+          300,
+          0.9974513578907275
+        ]
+      ]
+    },
+    "hTCanSum": {
+      "label": "a.hTCanSum",
+      "def": "@(x,a,u,d,p)0.5*((x.tCanSum)/(p.tEndSum)+sqrt(((x.tCanSum)./(p.tEndSum)).^2+0.0001))-(0.5*((x.tCanSum-(p.tEndSum))./(p.tEndSum)+sqrt(((x.tCanSum-(p.tEndSum))/(p.tEndSum)).^2+0.0001)))",
+      "val": [
+        [
+          0,
+          0.004975000624968802
+        ],
+        [
+          300,
+          0.005004449270477246
+        ]
+      ]
+    },
+    "hBufOrg": {
+      "label": "a.hBufOrg",
+      "def": "@(x,a,u,d,p)1./(1+exp(-0.005*(x.cBuf-(p.cBufMin))))",
+      "val": [
+        [
+          0,
+          0.0066928509242848554
+        ],
+        [
+          300,
+          0.007264096010364753
+        ]
+      ]
+    },
+    "mcBufLeaf": {
+      "label": "a.mcBufLeaf",
+      "def": "@(x,a,u,d,p)(((a.hBufOrg).*(a.hTCan24)).*(a.gTCan24)).*(p.rgLeaf)",
+      "val": [
+        [
+          0,
+          0.0006471666651693338
+        ],
+        [
+          300,
+          0.0007020925200651438
+        ]
+      ]
+    },
+    "mcBufStem": {
+      "label": "a.mcBufStem",
+      "def": "@(x,a,u,d,p)(((a.hBufOrg).*(a.hTCan24)).*(a.gTCan24)).*(p.rgStem)",
+      "val": [
+        [
+          0,
+          0.0005041087707634811
+        ],
+        [
+          300,
+          0.0005468931208928488
+        ]
+      ]
+    },
+    "mcBufFruit": {
+      "label": "a.mcBufFruit",
+      "def": "@(x,a,u,d,p)(((((a.hBufOrg).*(a.hTCan)).*(a.hTCan24)).*(a.hTCanSum)).*(a.gTCan24)).*(p.rgFruit)",
+      "val": [
+        [
+          0,
+          1.1110610077500393e-05
+        ],
+        [
+          300,
+          1.2100201477844624e-05
+        ]
+      ]
+    },
+    "mcBufAir": {
+      "label": "a.mcBufAir",
+      "def": "@(x,a,u,d,p)(p.cLeafG)*(a.mcBufLeaf)+(p.cStemG)*(a.mcBufStem)+(p.cFruitG)*(a.mcBufFruit)",
+      "val": [
+        [
+          0,
+          0.00033543916219738295
+        ],
+        [
+          300,
+          0.0003639208962851131
+        ]
+      ]
+    },
+    "mcLeafAir": {
+      "label": "a.mcLeafAir",
+      "def": "@(x,a,u,d,p)(((1-(exp((-1*(p.cRgr))*(p.rgr)))).*((p.q10m).^(0.1*(x.tCan24-25)))).*(x.cLeaf))*(p.cLeafM)",
+      "val": [
+        [
+          0,
+          0.0011093396676809936
+        ],
+        [
+          300,
+          0.0011085084842064525
+        ]
+      ]
+    },
+    "mcStemAir": {
+      "label": "a.mcStemAir",
+      "def": "@(x,a,u,d,p)(((1-(exp((-1*(p.cRgr))*(p.rgr)))).*((p.q10m).^(0.1*(x.tCan24-25)))).*(x.cStem))*(p.cStemM)",
+      "val": [
+        [
+          0,
+          0.00016783957508141833
+        ],
+        [
+          300,
+          0.00016773033303361362
+        ]
+      ]
+    },
+    "mcFruitAir": {
+      "label": "a.mcFruitAir",
+      "def": "@(x,a,u,d,p)(((1-(exp((-1*(p.cRgr))*(p.rgr)))).*((p.q10m).^(0.1*(x.tCan24-25)))).*(x.cFruit))*(p.cFruitM)",
+      "val": [
+        [
+          0,
+          2.6488966951625206e-05
+        ],
+        [
+          300,
+          2.646953355907697e-05
+        ]
+      ]
+    },
+    "mcOrgAir": {
+      "label": "a.mcOrgAir",
+      "def": "@(x,a,u,d,p)a.mcLeafAir+a.mcStemAir+a.mcFruitAir",
+      "val": [
+        [
+          0,
+          0.0013036682097140372
+        ],
+        [
+          300,
+          0.001302708350799143
+        ]
+      ]
+    },
+    "mcLeafHar": {
+      "label": "a.mcLeafHar",
+      "def": "@(x,a,u,d,p)50000./(1+exp((((-1*(x.cLeaf-(p.cLeafMax)))*2)*4.6052)./10000))",
+      "val": [
+        [
+          0,
+          2.1533136793647384e-39
+        ],
+        [
+          300,
+          2.1530540699618692e-39
+        ]
+      ]
+    },
+    "mcFruitHar": {
+      "label": "a.mcFruitHar",
+      "def": "@(x,a,u,d,p)50000./(1+exp((((-1*(x.cFruit-(p.cFruitMax)))*2)*4.6052)./10000))",
+      "val": [
+        [
+          0,
+          6.652638558714205e-116
+        ],
+        [
+          300,
+          6.652611145473862e-116
+        ]
+      ]
+    },
+    "mcAirCan": {
+      "label": "a.mcAirCan",
+      "def": "@(x,a,u,d,p)((p.mCo2)/(p.mCh2o))*(a.mcAirBuf-(a.mcBufAir)-(a.mcOrgAir))",
+      "val": [
+        [
+          0,
+          0.045784857577886105
+        ],
+        [
+          300,
+          0.08758214696333257
+        ]
+      ]
+    },
+    "mcAirTop": {
+      "label": "a.mcAirTop",
+      "def": "@(x,a,u,d,p)(abs(a.fScr)).*(x.co2Air-(x.co2Top))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.4656320562621125
+        ]
+      ]
+    },
+    "mcTopOut": {
+      "label": "a.mcTopOut",
+      "def": "@(x,a,u,d,p)(abs(a.fVentRoof)).*(x.co2Top-(d.co2Out))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.07760557417619134
+        ]
+      ]
+    },
+    "mcAirOut": {
+      "label": "a.mcAirOut",
+      "def": "@(x,a,u,d,p)(abs(a.fVentSide+a.fVentForced)).*(x.co2Air-(d.co2Out))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0.029379938694380634
+        ]
+      ]
+    },
+    "hBoilPipe": {
+      "label": "a.hBoilPipe",
+      "def": "@(x,a,u,d,p)((u.boil)*(p.pBoil))/(p.aFlr)",
+      "val": [
+        [
+          0,
+          299.99999997000447
+        ],
+        [
+          300,
+          299.9990313142416
+        ]
+      ]
+    },
+    "hBoilGroPipe": {
+      "label": "a.hBoilGroPipe",
+      "def": "@(x,a,u,d,p)((u.boilGro)*(p.pBoilGro))/(p.aFlr)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mcExtAir": {
+      "label": "a.mcExtAir",
+      "def": "@(x,a,u,d,p)((u.extCo2)*(p.phiExtCo2))/(p.aFlr)",
+      "val": [
+        [
+          0,
+          5.142857142857142
+        ],
+        [
+          300,
+          5.142857142857139
+        ]
+      ]
+    },
+    "mcBlowAir": {
+      "label": "a.mcBlowAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mcPadAir": {
+      "label": "a.mcPadAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hPadAir": {
+      "label": "a.hPadAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hPasAir": {
+      "label": "a.hPasAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hBlowAir": {
+      "label": "a.hBlowAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hAirPadOut": {
+      "label": "a.hAirPadOut",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hAirOutPad": {
+      "label": "a.hAirOutPad",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "lAirFog": {
+      "label": "a.lAirFog",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hIndPipe": {
+      "label": "a.hIndPipe",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hGeoPipe": {
+      "label": "a.hGeoPipe",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hLampCool": {
+      "label": "a.hLampCool",
+      "def": "@(x,a,u,d,p)(p.etaLampCool)*(a.qLampIn)",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hecMechAir": {
+      "label": "a.hecMechAir",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hAirMech": {
+      "label": "a.hAirMech",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "mvAirMech": {
+      "label": "a.mvAirMech",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "lAirMech": {
+      "label": "a.lAirMech",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "hBufHotPipe": {
+      "label": "a.hBufHotPipe",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    }
+  },
+  "d": {
+    "iGlob": {
+      "label": "d.iGlob",
+      "def": "@(x,a,u,d,p)d.iGlob",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "tOut": {
+      "label": "d.tOut",
+      "def": "@(x,a,u,d,p)d.tOut",
+      "val": [
+        [
+          0,
+          -5.1
+        ],
+        [
+          300,
+          -5.104619984536398
+        ]
+      ]
+    },
+    "vpOut": {
+      "label": "d.vpOut",
+      "def": "@(x,a,u,d,p)d.vpOut",
+      "val": [
+        [
+          0,
+          272.1295814690595
+        ],
+        [
+          300,
+          273.79056274418923
+        ]
+      ]
+    },
+    "co2Out": {
+      "label": "d.co2Out",
+      "def": "@(x,a,u,d,p)d.co2Out",
+      "val": [
+        [
+          0,
+          820.3553000475085
+        ],
+        [
+          300,
+          820.3694195946472
+        ]
+      ]
+    },
+    "wind": {
+      "label": "d.wind",
+      "def": "@(x,a,u,d,p)d.wind",
+      "val": [
+        [
+          0,
+          2.5
+        ],
+        [
+          300,
+          2.5
+        ]
+      ]
+    },
+    "tSky": {
+      "label": "d.tSky",
+      "def": "@(x,a,u,d,p)d.tSky",
+      "val": [
+        [
+          0,
+          -19.687365623982885
+        ],
+        [
+          300,
+          -19.913658910551202
+        ]
+      ]
+    },
+    "tSoOut": {
+      "label": "d.tSoOut",
+      "def": "@(x,a,u,d,p)d.tSoOut",
+      "val": [
+        [
+          0,
+          6.590358689959268
+        ],
+        [
+          300,
+          6.589845711288506
+        ]
+      ]
+    },
+    "dayRadSum": {
+      "label": "d.dayRadSum",
+      "def": "@(x,a,u,d,p)d.dayRadSum",
+      "val": [
+        [
+          0,
+          7.380000054643028
+        ],
+        [
+          300,
+          7.380000054643028
+        ]
+      ]
+    },
+    "isDay": {
+      "label": "d.isDay",
+      "def": "@(x,a,u,d,p)d.isDay",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "isDaySmooth": {
+      "label": "d.isDaySmooth",
+      "def": "@(x,a,u,d,p)d.isDaySmooth",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    }
+  },
+  "p": {
+    "alfaLeafAir": {
+      "label": "p.alfaLeafAir",
+      "def": "@(x,a,u,d,p)p.alfaLeafAir",
+      "val": 5
+    },
+    "L": {
+      "label": "p.L",
+      "def": "@(x,a,u,d,p)p.L",
+      "val": 2450000.0
+    },
+    "sigma": {
+      "label": "p.sigma",
+      "def": "@(x,a,u,d,p)p.sigma",
+      "val": 5.67e-08
+    },
+    "epsCan": {
+      "label": "p.epsCan",
+      "def": "@(x,a,u,d,p)p.epsCan",
+      "val": 1
+    },
+    "epsSky": {
+      "label": "p.epsSky",
+      "def": "@(x,a,u,d,p)p.epsSky",
+      "val": 1
+    },
+    "etaGlobNir": {
+      "label": "p.etaGlobNir",
+      "def": "@(x,a,u,d,p)p.etaGlobNir",
+      "val": 0.5
+    },
+    "etaGlobPar": {
+      "label": "p.etaGlobPar",
+      "def": "@(x,a,u,d,p)p.etaGlobPar",
+      "val": 0.5
+    },
+    "etaMgPpm": {
+      "label": "p.etaMgPpm",
+      "def": "@(x,a,u,d,p)p.etaMgPpm",
+      "val": 0.554
+    },
+    "etaRoofThr": {
+      "label": "p.etaRoofThr",
+      "def": "@(x,a,u,d,p)p.etaRoofThr",
+      "val": 0.9
+    },
+    "rhoAir0": {
+      "label": "p.rhoAir0",
+      "def": "@(x,a,u,d,p)p.rhoAir0",
+      "val": 1.2
+    },
+    "rhoCanPar": {
+      "label": "p.rhoCanPar",
+      "def": "@(x,a,u,d,p)p.rhoCanPar",
+      "val": 0.07
+    },
+    "rhoCanNir": {
+      "label": "p.rhoCanNir",
+      "def": "@(x,a,u,d,p)p.rhoCanNir",
+      "val": 0.35
+    },
+    "rhoSteel": {
+      "label": "p.rhoSteel",
+      "def": "@(x,a,u,d,p)p.rhoSteel",
+      "val": 7850
+    },
+    "rhoWater": {
+      "label": "p.rhoWater",
+      "def": "@(x,a,u,d,p)p.rhoWater",
+      "val": 1000
+    },
+    "gamma": {
+      "label": "p.gamma",
+      "def": "@(x,a,u,d,p)p.gamma",
+      "val": 65.8
+    },
+    "omega": {
+      "label": "p.omega",
+      "def": "@(x,a,u,d,p)p.omega",
+      "val": 1.99e-07
+    },
+    "capLeaf": {
+      "label": "p.capLeaf",
+      "def": "@(x,a,u,d,p)p.capLeaf",
+      "val": 1200
+    },
+    "cEvap1": {
+      "label": "p.cEvap1",
+      "def": "@(x,a,u,d,p)p.cEvap1",
+      "val": 4.3
+    },
+    "cEvap2": {
+      "label": "p.cEvap2",
+      "def": "@(x,a,u,d,p)p.cEvap2",
+      "val": 0.54
+    },
+    "cEvap3Day": {
+      "label": "p.cEvap3Day",
+      "def": "@(x,a,u,d,p)p.cEvap3Day",
+      "val": 6.1e-07
+    },
+    "cEvap3Night": {
+      "label": "p.cEvap3Night",
+      "def": "@(x,a,u,d,p)p.cEvap3Night",
+      "val": 1.1e-11
+    },
+    "cEvap4Day": {
+      "label": "p.cEvap4Day",
+      "def": "@(x,a,u,d,p)p.cEvap4Day",
+      "val": 4.3e-06
+    },
+    "cEvap4Night": {
+      "label": "p.cEvap4Night",
+      "def": "@(x,a,u,d,p)p.cEvap4Night",
+      "val": 5.2e-06
+    },
+    "cPAir": {
+      "label": "p.cPAir",
+      "def": "@(x,a,u,d,p)p.cPAir",
+      "val": 1000
+    },
+    "cPSteel": {
+      "label": "p.cPSteel",
+      "def": "@(x,a,u,d,p)p.cPSteel",
+      "val": 640
+    },
+    "cPWater": {
+      "label": "p.cPWater",
+      "def": "@(x,a,u,d,p)p.cPWater",
+      "val": 4180
+    },
+    "g": {
+      "label": "p.g",
+      "def": "@(x,a,u,d,p)p.g",
+      "val": 9.81
+    },
+    "hSo1": {
+      "label": "p.hSo1",
+      "def": "@(x,a,u,d,p)p.hSo1",
+      "val": 0.04
+    },
+    "hSo2": {
+      "label": "p.hSo2",
+      "def": "@(x,a,u,d,p)p.hSo2",
+      "val": 0.08
+    },
+    "hSo3": {
+      "label": "p.hSo3",
+      "def": "@(x,a,u,d,p)p.hSo3",
+      "val": 0.16
+    },
+    "hSo4": {
+      "label": "p.hSo4",
+      "def": "@(x,a,u,d,p)p.hSo4",
+      "val": 0.32
+    },
+    "hSo5": {
+      "label": "p.hSo5",
+      "def": "@(x,a,u,d,p)p.hSo5",
+      "val": 0.64
+    },
+    "k1Par": {
+      "label": "p.k1Par",
+      "def": "@(x,a,u,d,p)p.k1Par",
+      "val": 0.7
+    },
+    "k2Par": {
+      "label": "p.k2Par",
+      "def": "@(x,a,u,d,p)p.k2Par",
+      "val": 0.7
+    },
+    "kNir": {
+      "label": "p.kNir",
+      "def": "@(x,a,u,d,p)p.kNir",
+      "val": 0.27
+    },
+    "kFir": {
+      "label": "p.kFir",
+      "def": "@(x,a,u,d,p)p.kFir",
+      "val": 0.94
+    },
+    "mAir": {
+      "label": "p.mAir",
+      "def": "@(x,a,u,d,p)p.mAir",
+      "val": 28.96
+    },
+    "hSoOut": {
+      "label": "p.hSoOut",
+      "def": "@(x,a,u,d,p)p.hSoOut",
+      "val": 1.28
+    },
+    "mWater": {
+      "label": "p.mWater",
+      "def": "@(x,a,u,d,p)p.mWater",
+      "val": 18
+    },
+    "R": {
+      "label": "p.R",
+      "def": "@(x,a,u,d,p)p.R",
+      "val": 8314
+    },
+    "rCanSp": {
+      "label": "p.rCanSp",
+      "def": "@(x,a,u,d,p)p.rCanSp",
+      "val": 5
+    },
+    "rB": {
+      "label": "p.rB",
+      "def": "@(x,a,u,d,p)p.rB",
+      "val": 275
+    },
+    "rSMin": {
+      "label": "p.rSMin",
+      "def": "@(x,a,u,d,p)p.rSMin",
+      "val": 82
+    },
+    "sRs": {
+      "label": "p.sRs",
+      "def": "@(x,a,u,d,p)p.sRs",
+      "val": -1
+    },
+    "etaGlobAir": {
+      "label": "p.etaGlobAir",
+      "def": "@(x,a,u,d,p)p.etaGlobAir",
+      "val": 0.1
+    },
+    "psi": {
+      "label": "p.psi",
+      "def": "@(x,a,u,d,p)p.psi",
+      "val": 22
+    },
+    "aFlr": {
+      "label": "p.aFlr",
+      "def": "@(x,a,u,d,p)p.aFlr",
+      "val": 40000
+    },
+    "aCov": {
+      "label": "p.aCov",
+      "def": "@(x,a,u,d,p)p.aCov",
+      "val": 48400
+    },
+    "hAir": {
+      "label": "p.hAir",
+      "def": "@(x,a,u,d,p)p.hAir",
+      "val": 6.3
+    },
+    "hGh": {
+      "label": "p.hGh",
+      "def": "@(x,a,u,d,p)p.hGh",
+      "val": 6.905
+    },
+    "cHecIn": {
+      "label": "p.cHecIn",
+      "def": "@(x,a,u,d,p)p.cHecIn",
+      "val": 1.86
+    },
+    "cHecOut1": {
+      "label": "p.cHecOut1",
+      "def": "@(x,a,u,d,p)p.cHecOut1",
+      "val": 2.8
+    },
+    "cHecOut2": {
+      "label": "p.cHecOut2",
+      "def": "@(x,a,u,d,p)p.cHecOut2",
+      "val": 1.2
+    },
+    "cHecOut3": {
+      "label": "p.cHecOut3",
+      "def": "@(x,a,u,d,p)p.cHecOut3",
+      "val": 1
+    },
+    "hElevation": {
+      "label": "p.hElevation",
+      "def": "@(x,a,u,d,p)p.hElevation",
+      "val": 100
+    },
+    "aRoof": {
+      "label": "p.aRoof",
+      "def": "@(x,a,u,d,p)p.aRoof",
+      "val": 4676
+    },
+    "hVent": {
+      "label": "p.hVent",
+      "def": "@(x,a,u,d,p)p.hVent",
+      "val": 1.3
+    },
+    "etaInsScr": {
+      "label": "p.etaInsScr",
+      "def": "@(x,a,u,d,p)p.etaInsScr",
+      "val": 1
+    },
+    "aSide": {
+      "label": "p.aSide",
+      "def": "@(x,a,u,d,p)p.aSide",
+      "val": 0
+    },
+    "cDgh": {
+      "label": "p.cDgh",
+      "def": "@(x,a,u,d,p)p.cDgh",
+      "val": 0.75
+    },
+    "cLeakage": {
+      "label": "p.cLeakage",
+      "def": "@(x,a,u,d,p)p.cLeakage",
+      "val": 0.0001
+    },
+    "cWgh": {
+      "label": "p.cWgh",
+      "def": "@(x,a,u,d,p)p.cWgh",
+      "val": 0.09
+    },
+    "hSideRoof": {
+      "label": "p.hSideRoof",
+      "def": "@(x,a,u,d,p)p.hSideRoof",
+      "val": 0
+    },
+    "epsRfFir": {
+      "label": "p.epsRfFir",
+      "def": "@(x,a,u,d,p)p.epsRfFir",
+      "val": 0.85
+    },
+    "rhoRf": {
+      "label": "p.rhoRf",
+      "def": "@(x,a,u,d,p)p.rhoRf",
+      "val": 2600
+    },
+    "rhoRfNir": {
+      "label": "p.rhoRfNir",
+      "def": "@(x,a,u,d,p)p.rhoRfNir",
+      "val": 0.13
+    },
+    "rhoRfPar": {
+      "label": "p.rhoRfPar",
+      "def": "@(x,a,u,d,p)p.rhoRfPar",
+      "val": 0.13
+    },
+    "rhoRfFir": {
+      "label": "p.rhoRfFir",
+      "def": "@(x,a,u,d,p)p.rhoRfFir",
+      "val": 0.15
+    },
+    "tauRfNir": {
+      "label": "p.tauRfNir",
+      "def": "@(x,a,u,d,p)p.tauRfNir",
+      "val": 0.85
+    },
+    "tauRfPar": {
+      "label": "p.tauRfPar",
+      "def": "@(x,a,u,d,p)p.tauRfPar",
+      "val": 0.85
+    },
+    "tauRfFir": {
+      "label": "p.tauRfFir",
+      "def": "@(x,a,u,d,p)p.tauRfFir",
+      "val": 0
+    },
+    "lambdaRf": {
+      "label": "p.lambdaRf",
+      "def": "@(x,a,u,d,p)p.lambdaRf",
+      "val": 1.05
+    },
+    "cPRf": {
+      "label": "p.cPRf",
+      "def": "@(x,a,u,d,p)p.cPRf",
+      "val": 840
+    },
+    "hRf": {
+      "label": "p.hRf",
+      "def": "@(x,a,u,d,p)p.hRf",
+      "val": 0.004
+    },
+    "epsShScrPerFir": {
+      "label": "p.epsShScrPerFir",
+      "def": "@(x,a,u,d,p)p.epsShScrPerFir",
+      "val": 0
+    },
+    "rhoShScrPer": {
+      "label": "p.rhoShScrPer",
+      "def": "@(x,a,u,d,p)p.rhoShScrPer",
+      "val": 0
+    },
+    "rhoShScrPerNir": {
+      "label": "p.rhoShScrPerNir",
+      "def": "@(x,a,u,d,p)p.rhoShScrPerNir",
+      "val": 0
+    },
+    "rhoShScrPerPar": {
+      "label": "p.rhoShScrPerPar",
+      "def": "@(x,a,u,d,p)p.rhoShScrPerPar",
+      "val": 0
+    },
+    "rhoShScrPerFir": {
+      "label": "p.rhoShScrPerFir",
+      "def": "@(x,a,u,d,p)p.rhoShScrPerFir",
+      "val": 0
+    },
+    "tauShScrPerNir": {
+      "label": "p.tauShScrPerNir",
+      "def": "@(x,a,u,d,p)p.tauShScrPerNir",
+      "val": 1
+    },
+    "tauShScrPerPar": {
+      "label": "p.tauShScrPerPar",
+      "def": "@(x,a,u,d,p)p.tauShScrPerPar",
+      "val": 1
+    },
+    "tauShScrPerFir": {
+      "label": "p.tauShScrPerFir",
+      "def": "@(x,a,u,d,p)p.tauShScrPerFir",
+      "val": 1
+    },
+    "lambdaShScrPer": {
+      "label": "p.lambdaShScrPer",
+      "def": "@(x,a,u,d,p)p.lambdaShScrPer",
+      "val": null
+    },
+    "cPShScrPer": {
+      "label": "p.cPShScrPer",
+      "def": "@(x,a,u,d,p)p.cPShScrPer",
+      "val": 0
+    },
+    "hShScrPer": {
+      "label": "p.hShScrPer",
+      "def": "@(x,a,u,d,p)p.hShScrPer",
+      "val": 0
+    },
+    "rhoShScrNir": {
+      "label": "p.rhoShScrNir",
+      "def": "@(x,a,u,d,p)p.rhoShScrNir",
+      "val": 0
+    },
+    "rhoShScrPar": {
+      "label": "p.rhoShScrPar",
+      "def": "@(x,a,u,d,p)p.rhoShScrPar",
+      "val": 0
+    },
+    "rhoShScrFir": {
+      "label": "p.rhoShScrFir",
+      "def": "@(x,a,u,d,p)p.rhoShScrFir",
+      "val": 0
+    },
+    "tauShScrNir": {
+      "label": "p.tauShScrNir",
+      "def": "@(x,a,u,d,p)p.tauShScrNir",
+      "val": 1
+    },
+    "tauShScrPar": {
+      "label": "p.tauShScrPar",
+      "def": "@(x,a,u,d,p)p.tauShScrPar",
+      "val": 1
+    },
+    "tauShScrFir": {
+      "label": "p.tauShScrFir",
+      "def": "@(x,a,u,d,p)p.tauShScrFir",
+      "val": 1
+    },
+    "etaShScrCd": {
+      "label": "p.etaShScrCd",
+      "def": "@(x,a,u,d,p)p.etaShScrCd",
+      "val": 0
+    },
+    "etaShScrCw": {
+      "label": "p.etaShScrCw",
+      "def": "@(x,a,u,d,p)p.etaShScrCw",
+      "val": 0
+    },
+    "kShScr": {
+      "label": "p.kShScr",
+      "def": "@(x,a,u,d,p)p.kShScr",
+      "val": 0
+    },
+    "epsThScrFir": {
+      "label": "p.epsThScrFir",
+      "def": "@(x,a,u,d,p)p.epsThScrFir",
+      "val": 0.67
+    },
+    "rhoThScr": {
+      "label": "p.rhoThScr",
+      "def": "@(x,a,u,d,p)p.rhoThScr",
+      "val": 200
+    },
+    "rhoThScrNir": {
+      "label": "p.rhoThScrNir",
+      "def": "@(x,a,u,d,p)p.rhoThScrNir",
+      "val": 0.35
+    },
+    "rhoThScrPar": {
+      "label": "p.rhoThScrPar",
+      "def": "@(x,a,u,d,p)p.rhoThScrPar",
+      "val": 0.35
+    },
+    "rhoThScrFir": {
+      "label": "p.rhoThScrFir",
+      "def": "@(x,a,u,d,p)p.rhoThScrFir",
+      "val": 0.18
+    },
+    "tauThScrNir": {
+      "label": "p.tauThScrNir",
+      "def": "@(x,a,u,d,p)p.tauThScrNir",
+      "val": 0.6
+    },
+    "tauThScrPar": {
+      "label": "p.tauThScrPar",
+      "def": "@(x,a,u,d,p)p.tauThScrPar",
+      "val": 0.6
+    },
+    "tauThScrFir": {
+      "label": "p.tauThScrFir",
+      "def": "@(x,a,u,d,p)p.tauThScrFir",
+      "val": 0.15
+    },
+    "cPThScr": {
+      "label": "p.cPThScr",
+      "def": "@(x,a,u,d,p)p.cPThScr",
+      "val": 1800
+    },
+    "hThScr": {
+      "label": "p.hThScr",
+      "def": "@(x,a,u,d,p)p.hThScr",
+      "val": 0.00035
+    },
+    "kThScr": {
+      "label": "p.kThScr",
+      "def": "@(x,a,u,d,p)p.kThScr",
+      "val": 5e-05
+    },
+    "epsBlScrFir": {
+      "label": "p.epsBlScrFir",
+      "def": "@(x,a,u,d,p)p.epsBlScrFir",
+      "val": 0.67
+    },
+    "rhoBlScr": {
+      "label": "p.rhoBlScr",
+      "def": "@(x,a,u,d,p)p.rhoBlScr",
+      "val": 200
+    },
+    "rhoBlScrNir": {
+      "label": "p.rhoBlScrNir",
+      "def": "@(x,a,u,d,p)p.rhoBlScrNir",
+      "val": 0.35
+    },
+    "rhoBlScrPar": {
+      "label": "p.rhoBlScrPar",
+      "def": "@(x,a,u,d,p)p.rhoBlScrPar",
+      "val": 0.35
+    },
+    "tauBlScrNir": {
+      "label": "p.tauBlScrNir",
+      "def": "@(x,a,u,d,p)p.tauBlScrNir",
+      "val": 0.01
+    },
+    "tauBlScrPar": {
+      "label": "p.tauBlScrPar",
+      "def": "@(x,a,u,d,p)p.tauBlScrPar",
+      "val": 0.01
+    },
+    "tauBlScrFir": {
+      "label": "p.tauBlScrFir",
+      "def": "@(x,a,u,d,p)p.tauBlScrFir",
+      "val": 0.7
+    },
+    "cPBlScr": {
+      "label": "p.cPBlScr",
+      "def": "@(x,a,u,d,p)p.cPBlScr",
+      "val": 1800
+    },
+    "hBlScr": {
+      "label": "p.hBlScr",
+      "def": "@(x,a,u,d,p)p.hBlScr",
+      "val": 0.00035
+    },
+    "kBlScr": {
+      "label": "p.kBlScr",
+      "def": "@(x,a,u,d,p)p.kBlScr",
+      "val": 5e-05
+    },
+    "epsFlr": {
+      "label": "p.epsFlr",
+      "def": "@(x,a,u,d,p)p.epsFlr",
+      "val": 1
+    },
+    "rhoFlr": {
+      "label": "p.rhoFlr",
+      "def": "@(x,a,u,d,p)p.rhoFlr",
+      "val": 2300
+    },
+    "rhoFlrNir": {
+      "label": "p.rhoFlrNir",
+      "def": "@(x,a,u,d,p)p.rhoFlrNir",
+      "val": 0.5
+    },
+    "rhoFlrPar": {
+      "label": "p.rhoFlrPar",
+      "def": "@(x,a,u,d,p)p.rhoFlrPar",
+      "val": 0.65
+    },
+    "lambdaFlr": {
+      "label": "p.lambdaFlr",
+      "def": "@(x,a,u,d,p)p.lambdaFlr",
+      "val": 1.7
+    },
+    "cPFlr": {
+      "label": "p.cPFlr",
+      "def": "@(x,a,u,d,p)p.cPFlr",
+      "val": 880
+    },
+    "hFlr": {
+      "label": "p.hFlr",
+      "def": "@(x,a,u,d,p)p.hFlr",
+      "val": 0.02
+    },
+    "rhoCpSo": {
+      "label": "p.rhoCpSo",
+      "def": "@(x,a,u,d,p)p.rhoCpSo",
+      "val": 1730000.0
+    },
+    "lambdaSo": {
+      "label": "p.lambdaSo",
+      "def": "@(x,a,u,d,p)p.lambdaSo",
+      "val": 0.85
+    },
+    "epsPipe": {
+      "label": "p.epsPipe",
+      "def": "@(x,a,u,d,p)p.epsPipe",
+      "val": 0.88
+    },
+    "phiPipeE": {
+      "label": "p.phiPipeE",
+      "def": "@(x,a,u,d,p)p.phiPipeE",
+      "val": 0.051
+    },
+    "phiPipeI": {
+      "label": "p.phiPipeI",
+      "def": "@(x,a,u,d,p)p.phiPipeI",
+      "val": 0.047
+    },
+    "lPipe": {
+      "label": "p.lPipe",
+      "def": "@(x,a,u,d,p)p.lPipe",
+      "val": 1.25
+    },
+    "pBoil": {
+      "label": "p.pBoil",
+      "def": "@(x,a,u,d,p)p.pBoil",
+      "val": 12000000.0
+    },
+    "phiExtCo2": {
+      "label": "p.phiExtCo2",
+      "def": "@(x,a,u,d,p)p.phiExtCo2",
+      "val": 205714.2857142857
+    },
+    "capPipe": {
+      "label": "p.capPipe",
+      "def": "@(x,a,u,d,p)(0.7854*(p.lPipe))*((((p.phiPipeE)^2-((p.phiPipeI)^2))*(p.rhoSteel))*(p.cPSteel)+(((p.phiPipeI)^2)*(p.rhoWater))*(p.cPWater))",
+      "val": 10998.572739
+    },
+    "rhoAir": {
+      "label": "p.rhoAir",
+      "def": "@(x,a,u,d,p)(p.rhoAir0)*(exp((((p.g)*(p.mAir))*(p.hElevation))/(293.15*(p.R))))",
+      "val": 1.2140696250803489
+    },
+    "capAir": {
+      "label": "p.capAir",
+      "def": "@(x,a,u,d,p)((p.hAir)*(p.rhoAir))*(p.cPAir)",
+      "val": 7648.638638006199
+    },
+    "capFlr": {
+      "label": "p.capFlr",
+      "def": "@(x,a,u,d,p)((p.hFlr)*(p.rhoFlr))*(p.cPFlr)",
+      "val": 40480
+    },
+    "capSo1": {
+      "label": "p.capSo1",
+      "def": "@(x,a,u,d,p)(p.hSo1)*(p.rhoCpSo)",
+      "val": 69200
+    },
+    "capSo2": {
+      "label": "p.capSo2",
+      "def": "@(x,a,u,d,p)(p.hSo2)*(p.rhoCpSo)",
+      "val": 138400
+    },
+    "capSo3": {
+      "label": "p.capSo3",
+      "def": "@(x,a,u,d,p)(p.hSo3)*(p.rhoCpSo)",
+      "val": 276800
+    },
+    "capSo4": {
+      "label": "p.capSo4",
+      "def": "@(x,a,u,d,p)(p.hSo4)*(p.rhoCpSo)",
+      "val": 553600
+    },
+    "capSo5": {
+      "label": "p.capSo5",
+      "def": "@(x,a,u,d,p)(p.hSo5)*(p.rhoCpSo)",
+      "val": 1107200.0
+    },
+    "capThScr": {
+      "label": "p.capThScr",
+      "def": "@(x,a,u,d,p)((p.hThScr)*(p.rhoThScr))*(p.cPThScr)",
+      "val": 125.99999999999999
+    },
+    "capTop": {
+      "label": "p.capTop",
+      "def": "@(x,a,u,d,p)((p.hGh-(p.hAir))*(p.rhoAir))*(p.cPAir)",
+      "val": 734.5121231736116
+    },
+    "capBlScr": {
+      "label": "p.capBlScr",
+      "def": "@(x,a,u,d,p)((p.hBlScr)*(p.rhoBlScr))*(p.cPBlScr)",
+      "val": 125.99999999999999
+    },
+    "capCo2Air": {
+      "label": "p.capCo2Air",
+      "def": "@(x,a,u,d,p)p.hAir",
+      "val": 6.3
+    },
+    "capCo2Top": {
+      "label": "p.capCo2Top",
+      "def": "@(x,a,u,d,p)p.hGh-(p.hAir)",
+      "val": 0.6050000000000004
+    },
+    "aPipe": {
+      "label": "p.aPipe",
+      "def": "@(x,a,u,d,p)(3.1416*(p.lPipe))*(p.phiPipeE)",
+      "val": 0.20027699999999998
+    },
+    "fCanFlr": {
+      "label": "p.fCanFlr",
+      "def": "@(x,a,u,d,p)1-((1.5394*(p.lPipe))*(p.phiPipeE))",
+      "val": 0.90186325
+    },
+    "pressure": {
+      "label": "p.pressure",
+      "def": "@(x,a,u,d,p)101325*((1-(2.5577e-05*(p.hElevation)))^5.2559)",
+      "val": 99970.27943000468
+    },
+    "globJtoUmol": {
+      "label": "p.globJtoUmol",
+      "def": "@(x,a,u,d,p)p.globJtoUmol",
+      "val": 2.3
+    },
+    "j25LeafMax": {
+      "label": "p.j25LeafMax",
+      "def": "@(x,a,u,d,p)p.j25LeafMax",
+      "val": 210
+    },
+    "cGamma": {
+      "label": "p.cGamma",
+      "def": "@(x,a,u,d,p)p.cGamma",
+      "val": 1.7
+    },
+    "etaCo2AirStom": {
+      "label": "p.etaCo2AirStom",
+      "def": "@(x,a,u,d,p)p.etaCo2AirStom",
+      "val": 0.67
+    },
+    "eJ": {
+      "label": "p.eJ",
+      "def": "@(x,a,u,d,p)p.eJ",
+      "val": 37000
+    },
+    "t25k": {
+      "label": "p.t25k",
+      "def": "@(x,a,u,d,p)p.t25k",
+      "val": 298.15
+    },
+    "S": {
+      "label": "p.S",
+      "def": "@(x,a,u,d,p)p.S",
+      "val": 710
+    },
+    "H": {
+      "label": "p.H",
+      "def": "@(x,a,u,d,p)p.H",
+      "val": 220000
+    },
+    "theta": {
+      "label": "p.theta",
+      "def": "@(x,a,u,d,p)p.theta",
+      "val": 0.7
+    },
+    "alpha": {
+      "label": "p.alpha",
+      "def": "@(x,a,u,d,p)p.alpha",
+      "val": 0.385
+    },
+    "mCh2o": {
+      "label": "p.mCh2o",
+      "def": "@(x,a,u,d,p)p.mCh2o",
+      "val": 0.03
+    },
+    "mCo2": {
+      "label": "p.mCo2",
+      "def": "@(x,a,u,d,p)p.mCo2",
+      "val": 0.044
+    },
+    "parJtoUmolSun": {
+      "label": "p.parJtoUmolSun",
+      "def": "@(x,a,u,d,p)p.parJtoUmolSun",
+      "val": 4.6
+    },
+    "laiMax": {
+      "label": "p.laiMax",
+      "def": "@(x,a,u,d,p)p.laiMax",
+      "val": 3
+    },
+    "sla": {
+      "label": "p.sla",
+      "def": "@(x,a,u,d,p)p.sla",
+      "val": 2.66e-05
+    },
+    "rgr": {
+      "label": "p.rgr",
+      "def": "@(x,a,u,d,p)p.rgr",
+      "val": 3e-06
+    },
+    "cLeafMax": {
+      "label": "p.cLeafMax",
+      "def": "@(x,a,u,d,p)(p.laiMax)./(p.sla)",
+      "val": 112781.95488721805
+    },
+    "cFruitMax": {
+      "label": "p.cFruitMax",
+      "def": "@(x,a,u,d,p)p.cFruitMax",
+      "val": 300000
+    },
+    "cFruitG": {
+      "label": "p.cFruitG",
+      "def": "@(x,a,u,d,p)p.cFruitG",
+      "val": 0.27
+    },
+    "cLeafG": {
+      "label": "p.cLeafG",
+      "def": "@(x,a,u,d,p)p.cLeafG",
+      "val": 0.28
+    },
+    "cStemG": {
+      "label": "p.cStemG",
+      "def": "@(x,a,u,d,p)p.cStemG",
+      "val": 0.3
+    },
+    "cRgr": {
+      "label": "p.cRgr",
+      "def": "@(x,a,u,d,p)p.cRgr",
+      "val": 2850000.0
+    },
+    "q10m": {
+      "label": "p.q10m",
+      "def": "@(x,a,u,d,p)p.q10m",
+      "val": 2
+    },
+    "cFruitM": {
+      "label": "p.cFruitM",
+      "def": "@(x,a,u,d,p)p.cFruitM",
+      "val": 1.16e-07
+    },
+    "cLeafM": {
+      "label": "p.cLeafM",
+      "def": "@(x,a,u,d,p)p.cLeafM",
+      "val": 3.47e-07
+    },
+    "cStemM": {
+      "label": "p.cStemM",
+      "def": "@(x,a,u,d,p)p.cStemM",
+      "val": 1.47e-07
+    },
+    "rgFruit": {
+      "label": "p.rgFruit",
+      "def": "@(x,a,u,d,p)p.rgFruit",
+      "val": 0.328
+    },
+    "rgLeaf": {
+      "label": "p.rgLeaf",
+      "def": "@(x,a,u,d,p)p.rgLeaf",
+      "val": 0.095
+    },
+    "rgStem": {
+      "label": "p.rgStem",
+      "def": "@(x,a,u,d,p)p.rgStem",
+      "val": 0.074
+    },
+    "cBufMax": {
+      "label": "p.cBufMax",
+      "def": "@(x,a,u,d,p)p.cBufMax",
+      "val": 20000
+    },
+    "cBufMin": {
+      "label": "p.cBufMin",
+      "def": "@(x,a,u,d,p)p.cBufMin",
+      "val": 1000
+    },
+    "tCan24Max": {
+      "label": "p.tCan24Max",
+      "def": "@(x,a,u,d,p)p.tCan24Max",
+      "val": 24.5
+    },
+    "tCan24Min": {
+      "label": "p.tCan24Min",
+      "def": "@(x,a,u,d,p)p.tCan24Min",
+      "val": 15
+    },
+    "tCanMax": {
+      "label": "p.tCanMax",
+      "def": "@(x,a,u,d,p)p.tCanMax",
+      "val": 34
+    },
+    "tCanMin": {
+      "label": "p.tCanMin",
+      "def": "@(x,a,u,d,p)p.tCanMin",
+      "val": 10
+    },
+    "tEndSum": {
+      "label": "p.tEndSum",
+      "def": "@(x,a,u,d,p)p.tEndSum",
+      "val": 1035
+    },
+    "rhMax": {
+      "label": "p.rhMax",
+      "def": "@(x,a,u,d,p)p.rhMax",
+      "val": 67
+    },
+    "dayThresh": {
+      "label": "p.dayThresh",
+      "def": "@(x,a,u,d,p)p.dayThresh",
+      "val": 20
+    },
+    "tSpDay": {
+      "label": "p.tSpDay",
+      "def": "@(x,a,u,d,p)p.tSpDay",
+      "val": 19.5
+    },
+    "tSpNight": {
+      "label": "p.tSpNight",
+      "def": "@(x,a,u,d,p)p.tSpNight",
+      "val": 18.5
+    },
+    "tHeatBand": {
+      "label": "p.tHeatBand",
+      "def": "@(x,a,u,d,p)p.tHeatBand",
+      "val": -1
+    },
+    "tVentOff": {
+      "label": "p.tVentOff",
+      "def": "@(x,a,u,d,p)p.tVentOff",
+      "val": 1
+    },
+    "tScreenOn": {
+      "label": "p.tScreenOn",
+      "def": "@(x,a,u,d,p)p.tScreenOn",
+      "val": 2
+    },
+    "thScrSpDay": {
+      "label": "p.thScrSpDay",
+      "def": "@(x,a,u,d,p)p.thScrSpDay",
+      "val": 5
+    },
+    "thScrSpNight": {
+      "label": "p.thScrSpNight",
+      "def": "@(x,a,u,d,p)p.thScrSpNight",
+      "val": 10
+    },
+    "thScrPband": {
+      "label": "p.thScrPband",
+      "def": "@(x,a,u,d,p)p.thScrPband",
+      "val": -1
+    },
+    "co2SpDay": {
+      "label": "p.co2SpDay",
+      "def": "@(x,a,u,d,p)p.co2SpDay",
+      "val": 1000
+    },
+    "co2Band": {
+      "label": "p.co2Band",
+      "def": "@(x,a,u,d,p)p.co2Band",
+      "val": -100
+    },
+    "heatDeadZone": {
+      "label": "p.heatDeadZone",
+      "def": "@(x,a,u,d,p)p.heatDeadZone",
+      "val": 5
+    },
+    "ventHeatPband": {
+      "label": "p.ventHeatPband",
+      "def": "@(x,a,u,d,p)p.ventHeatPband",
+      "val": 4
+    },
+    "ventColdPband": {
+      "label": "p.ventColdPband",
+      "def": "@(x,a,u,d,p)p.ventColdPband",
+      "val": -1
+    },
+    "ventRhPband": {
+      "label": "p.ventRhPband",
+      "def": "@(x,a,u,d,p)p.ventRhPband",
+      "val": 50
+    },
+    "thScrRh": {
+      "label": "p.thScrRh",
+      "def": "@(x,a,u,d,p)p.thScrRh",
+      "val": -2
+    },
+    "thScrRhPband": {
+      "label": "p.thScrRhPband",
+      "def": "@(x,a,u,d,p)p.thScrRhPband",
+      "val": 10
+    },
+    "thScrDeadZone": {
+      "label": "p.thScrDeadZone",
+      "def": "@(x,a,u,d,p)p.thScrDeadZone",
+      "val": 4
+    },
+    "lampsOn": {
+      "label": "p.lampsOn",
+      "def": "@(x,a,u,d,p)p.lampsOn",
+      "val": 0
+    },
+    "lampsOff": {
+      "label": "p.lampsOff",
+      "def": "@(x,a,u,d,p)p.lampsOff",
+      "val": 12
+    },
+    "dayLampStart": {
+      "label": "p.dayLampStart",
+      "def": "@(x,a,u,d,p)p.dayLampStart",
+      "val": -1
+    },
+    "dayLampStop": {
+      "label": "p.dayLampStop",
+      "def": "@(x,a,u,d,p)p.dayLampStop",
+      "val": 400
+    },
+    "lampsOffSun": {
+      "label": "p.lampsOffSun",
+      "def": "@(x,a,u,d,p)p.lampsOffSun",
+      "val": 400
+    },
+    "lampRadSumLimit": {
+      "label": "p.lampRadSumLimit",
+      "def": "@(x,a,u,d,p)p.lampRadSumLimit",
+      "val": 10
+    },
+    "lampExtraHeat": {
+      "label": "p.lampExtraHeat",
+      "def": "@(x,a,u,d,p)p.lampExtraHeat",
+      "val": 2
+    },
+    "blScrExtraRh": {
+      "label": "p.blScrExtraRh",
+      "def": "@(x,a,u,d,p)p.blScrExtraRh",
+      "val": 100
+    },
+    "useBlScr": {
+      "label": "p.useBlScr",
+      "def": "@(x,a,u,d,p)p.useBlScr",
+      "val": 0
+    },
+    "mechCoolPband": {
+      "label": "p.mechCoolPband",
+      "def": "@(x,a,u,d,p)p.mechCoolPband",
+      "val": 1
+    },
+    "mechDehumidPband": {
+      "label": "p.mechDehumidPband",
+      "def": "@(x,a,u,d,p)p.mechDehumidPband",
+      "val": 2
+    },
+    "heatBufPband": {
+      "label": "p.heatBufPband",
+      "def": "@(x,a,u,d,p)p.heatBufPband",
+      "val": -1
+    },
+    "mechCoolDeadZone": {
+      "label": "p.mechCoolDeadZone",
+      "def": "@(x,a,u,d,p)p.mechCoolDeadZone",
+      "val": 2
+    },
+    "epsGroPipe": {
+      "label": "p.epsGroPipe",
+      "def": "@(x,a,u,d,p)p.epsGroPipe",
+      "val": 0
+    },
+    "lGroPipe": {
+      "label": "p.lGroPipe",
+      "def": "@(x,a,u,d,p)p.lGroPipe",
+      "val": 1.655
+    },
+    "phiGroPipeE": {
+      "label": "p.phiGroPipeE",
+      "def": "@(x,a,u,d,p)p.phiGroPipeE",
+      "val": 0.035
+    },
+    "phiGroPipeI": {
+      "label": "p.phiGroPipeI",
+      "def": "@(x,a,u,d,p)p.phiGroPipeI",
+      "val": 0.033800000000000004
+    },
+    "aGroPipe": {
+      "label": "p.aGroPipe",
+      "def": "@(x,a,u,d,p)(3.1416*(p.lGroPipe))*(p.phiGroPipeE)",
+      "val": 0.18197718000000002
+    },
+    "pBoilGro": {
+      "label": "p.pBoilGro",
+      "def": "@(x,a,u,d,p)p.pBoilGro",
+      "val": 0
+    },
+    "capGroPipe": {
+      "label": "p.capGroPipe",
+      "def": "@(x,a,u,d,p)(0.7854*(p.lGroPipe))*((((p.phiGroPipeE)^2-((p.phiGroPipeI)^2))*(p.rhoSteel))*(p.cPSteel)+(((p.phiGroPipeI)^2)*(p.rhoWater))*(p.cPWater))",
+      "val": 6746.38883255568
+    },
+    "thetaLampMax": {
+      "label": "p.thetaLampMax",
+      "def": "@(x,a,u,d,p)p.thetaLampMax",
+      "val": 66.66666666666667
+    },
+    "heatCorrection": {
+      "label": "p.heatCorrection",
+      "def": "@(x,a,u,d,p)p.heatCorrection",
+      "val": 0
+    },
+    "etaLampPar": {
+      "label": "p.etaLampPar",
+      "def": "@(x,a,u,d,p)p.etaLampPar",
+      "val": 0.5545286506469501
+    },
+    "etaLampNir": {
+      "label": "p.etaLampNir",
+      "def": "@(x,a,u,d,p)p.etaLampNir",
+      "val": 0.02
+    },
+    "tauLampPar": {
+      "label": "p.tauLampPar",
+      "def": "@(x,a,u,d,p)p.tauLampPar",
+      "val": 0.98
+    },
+    "rhoLampPar": {
+      "label": "p.rhoLampPar",
+      "def": "@(x,a,u,d,p)p.rhoLampPar",
+      "val": 0
+    },
+    "tauLampNir": {
+      "label": "p.tauLampNir",
+      "def": "@(x,a,u,d,p)p.tauLampNir",
+      "val": 0.98
+    },
+    "rhoLampNir": {
+      "label": "p.rhoLampNir",
+      "def": "@(x,a,u,d,p)p.rhoLampNir",
+      "val": 0
+    },
+    "tauLampFir": {
+      "label": "p.tauLampFir",
+      "def": "@(x,a,u,d,p)p.tauLampFir",
+      "val": 0.98
+    },
+    "aLamp": {
+      "label": "p.aLamp",
+      "def": "@(x,a,u,d,p)p.aLamp",
+      "val": 0.02
+    },
+    "epsLampTop": {
+      "label": "p.epsLampTop",
+      "def": "@(x,a,u,d,p)p.epsLampTop",
+      "val": 0.88
+    },
+    "epsLampBottom": {
+      "label": "p.epsLampBottom",
+      "def": "@(x,a,u,d,p)p.epsLampBottom",
+      "val": 0.88
+    },
+    "capLamp": {
+      "label": "p.capLamp",
+      "def": "@(x,a,u,d,p)p.capLamp",
+      "val": 10
+    },
+    "cHecLampAir": {
+      "label": "p.cHecLampAir",
+      "def": "@(x,a,u,d,p)p.cHecLampAir",
+      "val": 2.3
+    },
+    "etaLampCool": {
+      "label": "p.etaLampCool",
+      "def": "@(x,a,u,d,p)p.etaLampCool",
+      "val": 0
+    },
+    "zetaLampPar": {
+      "label": "p.zetaLampPar",
+      "def": "@(x,a,u,d,p)p.zetaLampPar",
+      "val": 5.41
+    },
+    "vIntLampPos": {
+      "label": "p.vIntLampPos",
+      "def": "@(x,a,u,d,p)p.vIntLampPos",
+      "val": 0.5
+    },
+    "fIntLampDown": {
+      "label": "p.fIntLampDown",
+      "def": "@(x,a,u,d,p)p.fIntLampDown",
+      "val": 0.5
+    },
+    "capIntLamp": {
+      "label": "p.capIntLamp",
+      "def": "@(x,a,u,d,p)p.capIntLamp",
+      "val": 10
+    },
+    "etaIntLampPar": {
+      "label": "p.etaIntLampPar",
+      "def": "@(x,a,u,d,p)p.etaIntLampPar",
+      "val": 0
+    },
+    "etaIntLampNir": {
+      "label": "p.etaIntLampNir",
+      "def": "@(x,a,u,d,p)p.etaIntLampNir",
+      "val": 0
+    },
+    "aIntLamp": {
+      "label": "p.aIntLamp",
+      "def": "@(x,a,u,d,p)p.aIntLamp",
+      "val": 0
+    },
+    "epsIntLamp": {
+      "label": "p.epsIntLamp",
+      "def": "@(x,a,u,d,p)p.epsIntLamp",
+      "val": 0
+    },
+    "thetaIntLampMax": {
+      "label": "p.thetaIntLampMax",
+      "def": "@(x,a,u,d,p)p.thetaIntLampMax",
+      "val": 0
+    },
+    "zetaIntLampPar": {
+      "label": "p.zetaIntLampPar",
+      "def": "@(x,a,u,d,p)p.zetaIntLampPar",
+      "val": 0
+    },
+    "cHecIntLampAir": {
+      "label": "p.cHecIntLampAir",
+      "def": "@(x,a,u,d,p)p.cHecIntLampAir",
+      "val": 0
+    },
+    "tauIntLampFir": {
+      "label": "p.tauIntLampFir",
+      "def": "@(x,a,u,d,p)p.tauIntLampFir",
+      "val": 1
+    },
+    "k1IntPar": {
+      "label": "p.k1IntPar",
+      "def": "@(x,a,u,d,p)p.k1IntPar",
+      "val": 1.4
+    },
+    "k2IntPar": {
+      "label": "p.k2IntPar",
+      "def": "@(x,a,u,d,p)p.k2IntPar",
+      "val": 1.4
+    },
+    "kIntNir": {
+      "label": "p.kIntNir",
+      "def": "@(x,a,u,d,p)p.kIntNir",
+      "val": 0.54
+    },
+    "kIntFir": {
+      "label": "p.kIntFir",
+      "def": "@(x,a,u,d,p)p.kIntFir",
+      "val": 1.88
+    },
+    "cLeakTop": {
+      "label": "p.cLeakTop",
+      "def": "@(x,a,u,d,p)p.cLeakTop",
+      "val": 0.5
+    },
+    "minWind": {
+      "label": "p.minWind",
+      "def": "@(x,a,u,d,p)p.minWind",
+      "val": 0.25
+    }
+  },
+  "u": {
+    "boil": {
+      "label": "0+1.*(1./(1+exp(((-2./(p.tHeatBand)).*4.6052).*(x.tAir-(a.heatSetPoint)-((p.tHeatBand)/2)))))",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.tHeatBand)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)))-((p.tHeatBand)/2)))))",
+      "val": [
+        [
+          0,
+          0.9999999999000149
+        ],
+        [
+          300,
+          0.9999967710474721
+        ]
+      ]
+    },
+    "extCo2": {
+      "label": "0+1.*(1./(1+exp(((-2./(p.co2Band)).*4.6052).*(a.co2InPpm-(a.co2SetPoint)-((p.co2Band)/2)))))",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.co2Band)).*4.6052).*(((8314459.8*(x.tAir+273.15)).*(1e-06*(x.co2Air)))/4459.3133-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.co2SpDay))-((p.co2Band)/2)))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          0.9999999999999993
+        ]
+      ]
+    },
+    "shScr": {
+      "label": "u.shScr",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "shScrPer": {
+      "label": "u.shScrPer",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "thScr": {
+      "label": "min(a.thScrCold,min(a.thScrHeat,a.thScrRh))",
+      "def": "@(x,a,u,d,p)min(0+1.*(1./(1+exp(((-2./(p.thScrPband)).*4.6052).*(d.tOut-((d.isDay).*(p.thScrSpDay)+(1-(d.isDay)).*(p.thScrSpNight))-((p.thScrPband)/2))))),min(1+-1.*(1./(1+exp(((-2./(-1*(p.thScrPband))).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.thScrDeadZone)-((-1*(p.thScrPband))/2))))),max(1+-1.*(1./(1+exp(((-2./(p.thScrRhPband)).*4.6052).*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+p.thScrRh)-((p.thScrRhPband)/2))))),1-(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2)))))))))",
+      "val": [
+        [
+          0,
+          0.999999000090438
+        ],
+        [
+          300,
+          0.9687185710179558
+        ]
+      ]
+    },
+    "roof": {
+      "label": "min(a.ventCold,max(a.ventHeat,a.ventRh))",
+      "def": "@(x,a,u,d,p)min(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2))))),max(0+1.*(1./(1+exp(((-2./(p.ventHeatPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.heatDeadZone)-((p.ventHeatPband)/2))))),0+1.*(1./(1+exp(((-2./(p.ventRhPband)).*4.6052).*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+(0).*(p.mechDehumidPband))-((p.ventRhPband)/2)))))))",
+      "val": [
+        [
+          0,
+          9.999095620383258e-07
+        ],
+        [
+          300,
+          0.03128142898204421
+        ]
+      ]
+    },
+    "side": {
+      "label": "u.side",
+      "def": "@(x,a,u,d,p)0",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    },
+    "lamp": {
+      "label": "u.lamp",
+      "def": "@(x,a,u,d,p)(((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.heatDeadZone+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2)))))))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "intLamp": {
+      "label": "u.intLamp",
+      "def": "@(x,a,u,d,p)(((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.heatDeadZone+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2)))))))))",
+      "val": [
+        [
+          0,
+          1
+        ],
+        [
+          300,
+          1
+        ]
+      ]
+    },
+    "boilGro": {
+      "label": "0+1.*(1./(1+exp(((-2./(p.tHeatBand)).*4.6052).*(x.tAir-(a.heatSetPoint)-((p.tHeatBand)/2)))))",
+      "def": "@(x,a,u,d,p)0+1.*(1./(1+exp(((-2./(p.tHeatBand)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)))-((p.tHeatBand)/2)))))",
+      "val": [
+        [
+          0,
+          0.9999999999000149
+        ],
+        [
+          300,
+          0.9999967710474721
+        ]
+      ]
+    },
+    "blScr": {
+      "label": "((p.useBlScr).*(1-(d.isDaySmooth))).*(max(a.lampOn,a.intLampOn))",
+      "def": "@(x,a,u,d,p)((p.useBlScr).*(1-(d.isDaySmooth))).*(max((((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.heatDeadZone+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2))))))))),(((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1)).*(0+1.*(1./(1+exp(18.4207.*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))+p.heatDeadZone+p.lampExtraHeat)--0.25)))))).*(d.isDaySmooth+(1-(d.isDaySmooth)).*(max(0+1.*(1./(1+exp(18.4207.*((100*(x.vpAir))./(610.78*(exp((17.2694*(x.tAir))./(x.tAir+238.3))))-(p.rhMax+p.blScrExtraRh)--0.25)))),1-(1+-1.*(1./(1+exp(((-2./(p.ventColdPband)).*4.6052).*(x.tAir-((max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay))*(p.tSpDay)+(1-(max(((((p.lampsOn)~=(p.lampsOff)).*(((p.lampsOn)<(p.lampsOff)).*(min(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1))))+(1-((p.lampsOn)<(p.lampsOff))).*(max(max(0,min(1,24*(x.time-(floor(x.time)))-(p.lampsOn)+1)),max(0,min(1,p.lampsOff-(24*(x.time-(floor(x.time))))+1)))))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1),d.isDay)))*(p.tSpNight)+(p.heatCorrection)*((((1.*((d.iGlob)<(p.lampsOffSun))).*((d.dayRadSum)<(p.lampRadSumLimit))).*((((p.lampsOn)<=(p.lampsOff)).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))&((24*(x.time-(floor(x.time))))<(p.lampsOff)))+(1-((p.lampsOn)<=(p.lampsOff))).*(((p.lampsOn)<(24*(x.time-(floor(x.time)))))|((24*(x.time-(floor(x.time))))<(p.lampsOff)))).*1)).*((((p.dayLampStart)<=(p.dayLampStop)).*(((p.dayLampStart)<(mod(x.time,365.2425)))&((mod(x.time,365.2425))<(p.dayLampStop)))+(1-((p.dayLampStart)<=(p.dayLampStop))).*(((p.dayLampStart)<(mod(x.time,365.2425)))|((mod(x.time,365.2425))<(p.dayLampStop)))).*1))-(p.tVentOff))-((p.ventColdPband)/2)))))))))))",
+      "val": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          0
+        ]
+      ]
+    }
+  },
+  "c": [],
+  "g": [],
+  "t": {
+    "label": "01-Jan-2005 01:00:00",
+    "def": [],
+    "val": [
+      0,
+      300.0000022351742
+    ]
+  },
+  "e": []
+}
