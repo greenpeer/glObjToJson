@@ -213,8 +213,8 @@ The sample resulting JSON string `json_str` will be:
 ```
 
 
+You can then save this JSON string to a file, a complete JSON file is [here](https://github.com/greenpeer/glObjToJson/blob/main/sample.json), or use it in other applications that work with JSON data.
 
-You can then save this JSON string to a file, or use it in other applications that work with JSON data.
 ## Limitations 
 - The `glObjToJson` function is designed to work with GreenLight model MATLAB objects that have nested structures, instances of the `DynamicModel` or `DynamicElement` class, function handles, and other field types. However, it may not handle other possible MATLAB data types or custom classes. 
 - The function currently assumes that function handles are only present in fields named 'def'. If you have function handles with different field names, you may need to modify the `encodeFieldValue` function accordingly.
