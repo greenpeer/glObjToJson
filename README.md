@@ -80,7 +80,7 @@ Encode a field value based on its name and type.
 
 Consider a MATLAB object `gl` with nested structures, instances of custom classes, such as DynamicModel, DynamicElement, and function handles:
 
-Calls the runGreenLight function from MATLAB with the specified lamp type, season, filename, parameters, crop maturity and return values.
+Calls the [`runGreenLight`](https://github.com/davkat1/GreenLight/blob/master/Code/runScenarios/runGreenLight.m) function from MATLAB with the specified lamp type, season, filename, parameters, crop maturity and return values.
 ```matlab
 gl = runGreenLight(lampType, season, filename, paramNames, paramVals, isMature)
 ```
